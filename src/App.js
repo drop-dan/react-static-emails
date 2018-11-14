@@ -1,24 +1,31 @@
 import React from 'react'
-import { Router, Link } from 'react-static'
 import { hot } from 'react-hot-loader'
-//
-import Routes from 'react-static-routes'
+import { Header, Footer, HeroImage, Heading, Button, Body, Item } from './components'
 
 import './app.css'
 
 const App = () => (
-  <Router>
+  <div className="main">
+    <div className="preheader-text">preheader text</div>
+
     <div>
-      <nav>
-        <Link exact to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/blog">Blog</Link>
-      </nav>
-      <div className="content">
-        <Routes />
+      <Header />
+      <HeroImage />
+      <div className="flex">
+        <Heading>Kick it with Adidas</Heading>
+        <Body>
+          Routines are made to be broken. So we made a new one for you, in favour of better health.
+        </Body>
+        <Button className="wide">Shop this Offer</Button>
       </div>
+
+      <Heading>Our recommended picks</Heading>
+
+      <Item />
+      <Button className="wide">Shop this Offer</Button>
+      <Footer />
     </div>
-  </Router>
+  </div>
 )
 
 export default hot(module)(App)
