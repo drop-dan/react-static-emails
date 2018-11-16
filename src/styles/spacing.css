@@ -2,6 +2,10 @@
   padding: 0;
 }
 
+.p0 {
+  padding: 0;
+}
+
 .p1 {
   padding: 10px;
 }
@@ -16,6 +20,14 @@
 
 .p4 {
   padding: 40px;
+}
+
+.pr0 {
+  padding-right: 0;
+}
+
+.pr0 {
+  padding-right: 0;
 }
 
 .pr1 {
@@ -34,6 +46,14 @@
   padding-right: 40px;
 }
 
+.pl0 {
+  padding-left: 0;
+}
+
+.pl0 {
+  padding-left: 0;
+}
+
 .pl1 {
   padding-left: 10px;
 }
@@ -48,6 +68,15 @@
 
 .pl4 {
   padding-left: 40px;
+}
+
+.px0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.px0 {
+  padding-left: 0;
 }
 
 .px1 {
@@ -70,6 +99,10 @@
   padding-right: 40px;
 }
 
+.pt0 {
+  padding-top: 0;
+}
+
 .pt1 {
   padding-top: 10px;
 }
@@ -86,6 +119,10 @@
   padding-top: 40px;
 }
 
+.pb0 {
+  padding-bottom: 0;
+}
+
 .pb1 {
   padding-bottom: 10px;
 }
@@ -100,6 +137,11 @@
 
 .pb4 {
   padding-bottom: 40px;
+}
+
+.py0 {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .py1 {
@@ -142,6 +184,10 @@
   margin: 40px;
 }
 
+.mr0 {
+  margin-right: 0;
+}
+
 .mr1 {
   margin-right: 10px;
 }
@@ -158,6 +204,10 @@
   margin-right: 40px;
 }
 
+.ml0 {
+  margin-left: 0;
+}
+
 .ml1 {
   margin-left: 10px;
 }
@@ -172,6 +222,11 @@
 
 .ml4 {
   margin-left: 40px;
+}
+
+.mx0 {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .mx1 {
@@ -194,6 +249,10 @@
   margin-right: 40px;
 }
 
+.mt0 {
+  margin-top: 0;
+}
+
 .mt1 {
   margin-top: 10px;
 }
@@ -210,6 +269,10 @@
   margin-top: 40px;
 }
 
+.mb0 {
+  margin-bottom: 0;
+}
+
 .mb1 {
   margin-bottom: 10px;
 }
@@ -224,6 +287,11 @@
 
 .mb4 {
   margin-bottom: 40px;
+}
+
+.my0 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .my1 {

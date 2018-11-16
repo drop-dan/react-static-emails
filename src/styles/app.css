@@ -40,7 +40,7 @@ a[x-apple-data-detectors] {
 .logo-bar {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 30px 26px;
 }
 
 .logo-bar div {
@@ -55,9 +55,9 @@ a[x-apple-data-detectors] {
 
 .button {
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 30px;
   height: 60px;
-  background-color: rgba(43, 214, 134, 1);
+  background-color: rgb(43, 214, 134);
   font-family: Sailec, sans-serif;
   color: #fff;
   display: block;
@@ -65,7 +65,7 @@ a[x-apple-data-detectors] {
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
-  line-height: 60px;
+  line-height: 62px;
   letter-spacing: 1.5px;
   text-align: center;
   text-decoration: none;
@@ -76,8 +76,14 @@ a[x-apple-data-detectors] {
   white-space: nowrap;
 }
 
+.button.light {
+  background-color: rgb(244, 253, 249);
+  color: rgb(43, 214, 134);
+}
+
 .button.wide {
-  padding: 0 60px;
+  padding: 0 65px;
+  letter-spacing: 1.9px;
 }
 
 .logo {
@@ -103,7 +109,6 @@ a[x-apple-data-detectors] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px 40px;
 }
 
 .divider {

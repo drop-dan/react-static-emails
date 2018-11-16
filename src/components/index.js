@@ -4,7 +4,7 @@ import image from '../hero.png'
 export { default as Button } from './Button'
 export { default as Header } from './Header'
 export { default as Footer } from './Footer'
-export { default as Item } from './Item'
+export { default as Item, OfferBlurb } from './Item'
 export { default as LogoBar } from './LogoBar'
 
 export const HeroImage = () => (

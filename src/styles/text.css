@@ -41,7 +41,7 @@ h3 {
 
 p,
 a {
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: -1.1px;
   color: #a3a3a3;
   font-family: SFProText, Sailec, sans-serif;
@@ -54,7 +54,9 @@ a {
 p.large,
 a.large {
   font-size: 22px;
-  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: -1.1px;
+  font-weight: 300;
   color: #a3a3a3;
 }
 
@@ -75,7 +77,7 @@ a.small {
   color: #57d686;
 }
 
-.point-rate {
+p.point-rate {
   font-family: SFProText-Bold, Sailec, sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -86,12 +88,26 @@ a.small {
   color: #ffb433;
 }
 
-.point-rate .point-circle {
+p.point-rate.small {
+  font-size: 12px;
+}
+
+p.point-rate .point-circle {
   width: 12px;
   height: 12px;
   background-color: #ffb433;
   display: inline-block;
   border-radius: 6px;
+  margin-right: 5px;
+  margin-bottom: 1px;
+}
+
+p.point-rate.small .point-circle {
+  width: 8px;
+  height: 8px;
+  background-color: #ffb433;
+  display: inline-block;
+  border-radius: 4px;
   margin-right: 5px;
   margin-bottom: 1px;
 }

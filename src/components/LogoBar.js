@@ -10,7 +10,9 @@ const LogoBar = () => (
       </a>
     </div>
     <div className="flex-end">
-      <Button href="http://litmus.com">OPEN DROP</Button>
+      <Button className="light" href="http://litmus.com">
+        OPEN DROP
+      </Button>
     </div>
   </div>
 )
