@@ -1,37 +1,31 @@
 import React from 'react'
-import { LogoBar, Heading, Body } from './'
+import { LogoBar } from './'
 
 const Footer = () => (
   <div>
     <LogoBar />
+    <div className="p2">
+      <h3>Let's sweeten your life.</h3>
 
-    <Heading>Let's sweeten your life.</Heading>
+      <p className="small left-align mt4">
+        © Copyright Drop Technologies Inc.
+        <br />
+        120 Front St E, Toronto, ON M5A 1E3
+      </p>
 
-    <Body>© Copyright Drop Technologies Inc. 123 Street St., Canada, 1A2 3B4</Body>
-    <a
-      href="http://litmus.com"
-      target="_blank"
-      style={{ color: '#666666', textDecoration: 'none' }}
-    >
-      1234 Main Street, Anywhere, MA 01234, USA
-    </a>
+      <a href="http://litmus.com" target="_blank" className="small">
+        Unsubscribe
+      </a>
 
-    <br />
-    <a
-      href="http://litmus.com"
-      target="_blank"
-      style={{ color: '#666666', textDecoration: 'none' }}
-    >
-      Unsubscribe
-    </a>
-    <br />
-    <a
-      href="http://litmus.com"
-      target="_blank"
-      style={{ color: '#666666', textDecoration: 'none' }}
-    >
-      View this email in your browser
-    </a>
+      <div className="mt4 mb4">
+        <a href="http://litmus.com" target="_blank" className="small mr2">
+          Privacy Policy
+        </a>
+        <a href="http://litmus.com" target="_blank" className="small">
+          Terms & Conditions
+        </a>
+      </div>
+    </div>
   </div>
 )
 

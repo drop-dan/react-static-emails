@@ -7,10 +7,6 @@ export { default as Footer } from './Footer'
 export { default as Item } from './Item'
 export { default as LogoBar } from './LogoBar'
 
-export const Heading = ({ children }) => <h1>{children}</h1>
-
-export const Body = ({ children }) => <p>{children}</p>
-
 export const HeroImage = () => (
   <img
     className="hero-image"
