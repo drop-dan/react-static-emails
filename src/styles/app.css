@@ -50,20 +50,10 @@ a[x-apple-data-detectors] {
 
 .button {
   box-sizing: border-box;
-  padding: 0 30px;
   height: 60px;
-  background-color: rgb(43, 214, 134);
-  font-family: Sailec, sans-serif;
-  color: #fff;
+  background-color: #2bd686;
   display: block;
-  font-size: 12px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 62px;
-  letter-spacing: 1.5px;
   text-align: center;
-  text-decoration: none;
   border: 0;
   outline: 0;
   border-radius: 100px;
@@ -71,15 +61,39 @@ a[x-apple-data-detectors] {
   white-space: nowrap;
 }
 
+.button a {
+  font-family: Helvetica, sans-serif;
+  padding: 25px 30px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 60px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
 .button.light {
   background-color: rgb(244, 253, 249);
+}
+
+.button.light a {
   color: rgb(43, 214, 134);
 }
 
 .button.wide {
-  padding: 0 65px;
-  letter-spacing: 1.9px;
   max-width: 220px;
+}
+
+.button.wide a {
+  padding: 25px 65px;
+  letter-spacing: 1.9px;
 }
 
 .logo-bar .drop-logo {
@@ -101,9 +115,14 @@ a[x-apple-data-detectors] {
 }
 
 .divider {
-  width: 100%;
+  width: 80%;
   height: 1px;
+  max-height: 1px;
+  padding: 0;
   border-radius: 8px;
   background-color: #ededed;
-  margin: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -9,7 +9,9 @@ h1,
 h2,
 h3,
 h4,
-p {
+p,
+a {
+  font-family: Sailec, sans-serif;
   font-style: normal;
   font-stretch: normal;
   text-align: center;
@@ -41,13 +43,13 @@ h3 {
 
 p,
 a {
-  font-weight: 300;
+  font-weight: normal;
   letter-spacing: -1.1px;
   color: #a3a3a3;
   font-family: Sailec, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.25px;
   color: #68686d;
 }
 
@@ -56,7 +58,7 @@ a.large {
   font-size: 22px;
   line-height: 1.45;
   letter-spacing: -1.1px;
-  font-weight: 300;
+  font-weight: 400;
   color: #a3a3a3;
 }
 
@@ -95,8 +97,6 @@ p.point-rate.small {
 p.point-rate .point-circle {
   width: 12px;
   height: 12px;
-  background-color: #ffb433;
-  display: inline-block;
   border-radius: 6px;
   margin-right: 5px;
   margin-bottom: 1px;

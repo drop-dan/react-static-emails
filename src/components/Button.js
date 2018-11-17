@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from './'
 
-const Button = ({ children, className, ...props }) => (
-  <Link {...props} className={`button ${className}`}>
-    {children.toUpperCase()}
-  </Link>
+const Button = ({
+  children, className, style, ...props
+}) => (
+  <div className={`button ${className}`} style={style}>
+    <Link {...props}>{children.toUpperCase()}</Link>
+  </div>
 )
 
 export default Button

@@ -22,36 +22,46 @@ export default {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="x-apple-disable-message-reformatting" />
         <style jsx global>
           {`
+            body {
+              height: 100% !important;
+              margin: 0 !important;
+              padding: 0 !important;
+              width: 100% !important;
+              background-color: #efefef;
+            }
             @font-face {
               font-family: Sailec;
-              src: url("https://s3.amazonaws.com/drop-web-font/Sailec-Light.otf");
+              src: url(https://s3.amazonaws.com/drop-web-font/Sailec-Light.otf);
               font-weight: 300;
               font-style: normal;
             }
             @font-face {
               font-family: Sailec;
-              src: url("https://s3.amazonaws.com/drop-web-font/Sailec.otf");
+              src: url(https://s3.amazonaws.com/drop-web-font/Sailec.otf);
               font-weight: normal;
               font-style: normal;
             }
             @font-face {
               font-family: Sailec;
-              src: url("https://s3.amazonaws.com/drop-web-font/Sailec-Medium.otf");
+              src: url(https://s3.amazonaws.com/drop-web-font/Sailec-Medium.otf);
               font-weight: 500;
               font-style: normal;
             }
             @font-face {
               font-family: Sailec;
-              src: url("https://s3.amazonaws.com/drop-web-font/Sailec-Bold.otf");
+              src: url(https://s3.amazonaws.com/drop-web-font/Sailec-Bold.otf);
               font-weight: bold;
               font-style: normal;
             }
           `}
         </style>
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   ),
 }

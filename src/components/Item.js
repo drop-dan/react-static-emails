@@ -22,7 +22,7 @@ const Item = ({
       {pointRate && <PointRate rate={pointRate} size="small" />}
 
       {image && (
-        <Link className="mt3" href={link}>
+        <Link className="mt3">
           <img
             src={image}
             width="300"
@@ -50,7 +50,11 @@ const Item = ({
         {body}
       </p>
 
-      {button && <Button className="wide mt3 mb2 mx-auto">{button}</Button>}
+      {button && (
+        <Button href="http://www.earnwithdrop.com/" className="wide mt3 mb2 mx-auto">
+          {button}
+        </Button>
+      )}
     </div>
 
     {divider && <div className="divider" />}
@@ -65,7 +69,14 @@ export const Logo = ({ image, brandName = 'brand' }) => (
 
 export const PointRate = ({ rate, size = 'normal' }) => (
   <p className={`point-rate ${size}`}>
-    <span className="point-circle" />
+    <img
+      className="point-circle"
+      src="https://s3.amazonaws.com/drop-web-font/point.png"
+      width="4"
+      height="4"
+      alt="point"
+      border="0"
+    />
     {rate.toUpperCase()}
   </p>
 )

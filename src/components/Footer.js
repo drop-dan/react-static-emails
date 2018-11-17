@@ -6,7 +6,7 @@ const Footer = ({ border = true }) => (
     <LogoBar border={border} />
     <div className="px3 mb4 pb4">
       <h3 className="my4 py2 left-align" style={{ fontSize: 22 }}>
-        Let's sweeten your life.
+        The free rewards app
       </h3>
 
       <p className="small left-align mt4">
