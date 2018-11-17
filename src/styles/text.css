@@ -44,7 +44,7 @@ a {
   font-weight: 300;
   letter-spacing: -1.1px;
   color: #a3a3a3;
-  font-family: SFProText, Sailec, sans-serif;
+  font-family: Sailec, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.3px;
@@ -105,9 +105,5 @@ p.point-rate .point-circle {
 p.point-rate.small .point-circle {
   width: 8px;
   height: 8px;
-  background-color: #ffb433;
-  display: inline-block;
   border-radius: 4px;
-  margin-right: 5px;
-  margin-bottom: 1px;
 }

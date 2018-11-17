@@ -1,16 +1,22 @@
 import React from 'react'
-import { Button } from './'
-import image from '../logo.png'
+import { Button, Link } from './'
 
-const LogoBar = () => (
-  <div className="logo-bar border-top">
+const LogoBar = ({ border = true }) => (
+  <div className={`logo-bar${border ? ' border-top' : ''}`}>
     <div>
-      <a href="http://litmus.com" target="_blank">
-        <img className="logo" alt="Logo" src={image} width="60" height="60" border="0" />
-      </a>
+      <Link href="https://b.ewd.io/T3TSSpSvuR">
+        <img
+          className="drop-logo"
+          alt="Logo"
+          src="https://s3.amazonaws.com/drop-web-font/logo.png"
+          width="60"
+          height="60"
+          border="0"
+        />
+      </Link>
     </div>
     <div className="flex-end">
-      <Button className="light" href="http://litmus.com">
+      <Button className="light" href="https://b.ewd.io/T3TSSpSvuR">
         OPEN DROP
       </Button>
     </div>

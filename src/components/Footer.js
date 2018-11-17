@@ -1,9 +1,9 @@
 import React from 'react'
-import { LogoBar } from './'
+import { LogoBar, Link } from './'
 
-const Footer = () => (
+const Footer = ({ border = true }) => (
   <div>
-    <LogoBar />
+    <LogoBar border={border} />
     <div className="px3 mb4 pb4">
       <h3 className="my4 py2 left-align" style={{ fontSize: 22 }}>
         Let's sweeten your life.
@@ -15,17 +15,17 @@ const Footer = () => (
         120 Front St E, Toronto, ON M5A 1E3
       </p>
 
-      <a href="http://litmus.com" target="_blank" className="small">
+      <Link href="https://www.earnwithdrop.com/pages/unsubscribe" className="small">
         Unsubscribe
-      </a>
+      </Link>
 
       <div className="my4">
-        <a href="http://litmus.com" target="_blank" className="small mr2">
+        <Link href="https://b.ewd.io/tcdpt8PoVR" className="small mr2">
           Privacy Policy
-        </a>
-        <a href="http://litmus.com" target="_blank" className="small">
+        </Link>
+        <Link href="https://b.ewd.io/HpnaznWoVR" className="small">
           Terms & Conditions
-        </a>
+        </Link>
       </div>
     </div>
 

@@ -1,36 +1,60 @@
 import React, { Fragment } from 'react'
-import { Button } from './'
+import { Button, Link } from './'
 
 const Item = ({
-  image, logo, brandName, tagline, title, body, button, pointRate,
+  image,
+  logo,
+  link,
+  brandName,
+  tagline,
+  title,
+  body,
+  button,
+  pointRate,
+  divider = true,
 }) => (
-  <div className="item-wrap mt1">
-    {logo && <Logo image={logo} brandName="title" />}
+  <Fragment>
+    <div className="item-wrap mt1">
+      {logo && <Logo image={logo} brandName="title" />}
 
-    {brandName && <h2 className="mt2 mb0">{brandName}</h2>}
+      {brandName && <h2 className="mt3 mb0">{brandName}</h2>}
 
-    {pointRate && <PointRate rate={pointRate} size="small" />}
+      {pointRate && <PointRate rate={pointRate} size="small" />}
 
-    <a className="mt3" href="http://litmus.com" target="_blank">
-      <img src={image} width="300" height="300" alt="Fluid images" border="0" className="item" />
-    </a>
+      {image && (
+        <Link className="mt3" href={link}>
+          <img
+            src={image}
+            width="300"
+            height="300"
+            alt="Fluid images"
+            border="0"
+            className="item"
+          />
+        </Link>
+      )}
 
-    {tagline && (
-      <p className="tagline m0" align="center" bgcolor="#F5F7FA">
-        {tagline.toUpperCase()}
+      {tagline && (
+        <p className="tagline m0" align="center" bgcolor="#F5F7FA">
+          {tagline.toUpperCase()}
+        </p>
+      )}
+
+      {title && (
+        <h3 className="mt2 mb1" align="center" bgcolor="#F5F7FA">
+          {title}
+        </h3>
+      )}
+
+      <p className="my2" align="center" bgcolor="#F5F7FA">
+        {body}
       </p>
-    )}
 
-    <h3 className="mt2 mb1" align="center" bgcolor="#F5F7FA">
-      {title}
-    </h3>
+      {button && <Button className="wide my2">{button}</Button>}
+    </div>
 
-    <p className="mt0 mb2" align="center" bgcolor="#F5F7FA">
-      {body}
-    </p>
-
-    {button && <Button className="wide my4">{button}</Button>}
-  </div>
+    {divider && <div className="divider" />}
+  </Fragment>
 )
 
 export const Logo = ({ image, brandName = 'brand' }) => (
@@ -42,21 +66,21 @@ export const Logo = ({ image, brandName = 'brand' }) => (
 export const PointRate = ({ rate, size = 'normal' }) => (
   <p className={`point-rate ${size}`}>
     <span className="point-circle" />
-    {rate} PTS
+    {rate.toUpperCase()}
   </p>
 )
 
 export const OfferBlurb = ({
-  title, pointRate, description, buttonText = 'Shop this offer',
+  title, pointRate, description, button,
 }) => (
   <Fragment>
     <h1 className="mt4 mb0">{title}</h1>
 
-    <PointRate rate={pointRate} />
+    {pointRate && <PointRate rate={pointRate} />}
 
-    <p className="mt1 mb4 large">{description}</p>
+    <p className="my1 large">{description}</p>
 
-    <Button className="wide">{buttonText}</Button>
+    {button}
   </Fragment>
 )
 
