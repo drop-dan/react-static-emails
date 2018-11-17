@@ -2,15 +2,11 @@
   border-top: 1px solid #efefef;
 }
 
-.flex-end {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .left-align {
   text-align: left;
 }
 
 .mx-auto {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }

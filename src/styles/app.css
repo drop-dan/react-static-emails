@@ -38,13 +38,8 @@ a[x-apple-data-detectors] {
 }
 
 .logo-bar {
-  display: flex;
-  align-items: center;
   padding: 30px 26px;
-}
-
-.logo-bar div {
-  flex: 1;
+  height: 60px;
 }
 
 .main {
@@ -84,6 +79,7 @@ a[x-apple-data-detectors] {
 .button.wide {
   padding: 0 65px;
   letter-spacing: 1.9px;
+  max-width: 220px;
 }
 
 .logo-bar .drop-logo {
@@ -102,13 +98,6 @@ a[x-apple-data-detectors] {
   background-color: #eaeaea;
   max-width: 100%;
   width: 600px;
-}
-
-.flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .divider {

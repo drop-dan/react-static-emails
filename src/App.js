@@ -39,7 +39,7 @@ const App = () => (
 
       <HeroImage image={header} />
 
-      <div className="p2 mx-auto" style={{ maxWidth: 450 }}>
+      <div className="p2 mx-auto" style={{ maxWidth: 430 }}>
         <OfferBlurb
           title="Black Friday"
           description="Starting tomorrow, score the best deals on your favorite brands - only with Drop."

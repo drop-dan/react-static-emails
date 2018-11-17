@@ -50,7 +50,7 @@ const Item = ({
         {body}
       </p>
 
-      {button && <Button className="wide my2">{button}</Button>}
+      {button && <Button className="wide mt3 mb2 mx-auto">{button}</Button>}
     </div>
 
     {divider && <div className="divider" />}
@@ -58,7 +58,7 @@ const Item = ({
 )
 
 export const Logo = ({ image, brandName = 'brand' }) => (
-  <div className="logo">
+  <div className="logo mx-auto">
     <img src={image} width="100" height="100" alt={brandName} border="0" />
   </div>
 )
