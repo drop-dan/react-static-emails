@@ -15,7 +15,7 @@ const Footer = ({ border = true }) => (
         120 Front St E, Toronto, ON M5A 1E3
       </p>
 
-      <Link href="https://www.earnwithdrop.com/pages/unsubscribe" className="small">
+      <Link href="{{ Unsubscribe URL }}" className="small">
         Unsubscribe
       </Link>
 

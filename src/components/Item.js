@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react'
-import { Button, Link } from './'
+import { Button } from './'
 
 const Item = ({
   image,
+  imageWidth = '300',
+  imageHeight = '300',
   logo,
   link,
   brandName,
@@ -22,16 +24,14 @@ const Item = ({
       {pointRate && <PointRate rate={pointRate} size="small" />}
 
       {image && (
-        <Link className="mt3">
-          <img
-            src={image}
-            width="300"
-            height="300"
-            alt="Fluid images"
-            border="0"
-            className="item"
-          />
-        </Link>
+        <img
+          src={image}
+          width={imageWidth}
+          height={imageHeight}
+          alt="Fluid images"
+          border="0"
+          className="item mx-auto"
+        />
       )}
 
       {tagline && (
@@ -46,12 +46,12 @@ const Item = ({
         </h3>
       )}
 
-      <p className="my2" align="center" bgcolor="#F5F7FA">
+      <p className="mt0 mb2" align="center" bgcolor="#F5F7FA">
         {body}
       </p>
 
       {button && (
-        <Button href="http://www.earnwithdrop.com/" className="wide mt3 mb2 mx-auto">
+        <Button href={link} className="wide mt3 mb2 mx-auto">
           {button}
         </Button>
       )}
