@@ -1,7 +1,11 @@
 import React from 'react'
 
-const fontString = (face = 'Sailec', weight = 'normal') =>
+const getFontString = (face = 'Sailec', weight = 'normal') =>
   `@font-face{font-family:Sailec;src:url(https://s3.amazonaws.com/drop-web-font/${face}.otf);font-weight:${weight};}`
+
+const fontString = ['Sailec_normal', 'Sailec-Medium_500', 'Sailec-Bold_bold'].map(string =>
+  getFontString(...string.split('_'))
+)
 
 const Document = ({ children }) => (
   <html lang="en">
@@ -9,11 +13,7 @@ const Document = ({ children }) => (
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="x-apple-disable-message-reformatting" />
-      <style jsx global>
-        {['Sailec_normal', 'Sailec-Medium_500', 'Sailec-Bold_bold'].map(string =>
-          fontString(...string.split('_'))
-        )}
-      </style>
+      <style>{fontString}</style>
     </head>
     <body
       style={{

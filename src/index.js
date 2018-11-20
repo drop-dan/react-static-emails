@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { hot } from 'react-hot-loader'
+import JetEmail from '../emails/templates/JetEmail'
 
-import App from './App'
+const Email = () => <JetEmail />
 
-export default App
+export default hot(module)(Email)
 
 if (typeof document !== 'undefined') {
   const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
@@ -11,5 +13,5 @@ if (typeof document !== 'undefined') {
     renderMethod(<Comp />, document.getElementById('root'))
   }
 
-  render(App)
+  render(Email)
 }

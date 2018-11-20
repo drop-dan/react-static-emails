@@ -1,5 +1,5 @@
 import React from 'react'
-import { Main, Header, HeroImage, OfferBlurb, Footer, Item } from '../components'
+import { Main, Header, HeroImage, OfferBlurb, Footer, Item } from '../../src/components'
 
 const Offer = props => <Item {...props} button="Shop now" />
 

@@ -61,25 +61,7 @@ const Item = ({
   </Fragment>
 )
 
-export const Logo = ({ image, brandName = 'brand' }) => (
-  <div className="logo mx-auto">
-    <img src={image} width="100" height="100" alt={brandName} border="0" />
-  </div>
-)
-
-export const PointRate = ({ rate, size = 'normal' }) => (
-  <p className={`point-rate ${size}`}>
-    <img
-      className="point-circle"
-      src="https://s3.amazonaws.com/drop-web-font/point.png"
-      width="4"
-      height="4"
-      alt="point"
-      border="0"
-    />
-    {rate.toUpperCase()}
-  </p>
-)
+export default Item
 
 export const OfferBlurb = ({
   title, pointRate, description, button,
@@ -95,4 +77,22 @@ export const OfferBlurb = ({
   </Fragment>
 )
 
-export default Item
+const Logo = ({ image, brandName = 'brand' }) => (
+  <div className="logo mx-auto">
+    <img src={image} width="100" height="100" alt={brandName} border="0" />
+  </div>
+)
+
+const PointRate = ({ rate, size = 'normal' }) => (
+  <p className={`point-rate ${size}`}>
+    <img
+      className="point-circle"
+      src="https://s3.amazonaws.com/drop-web-font/point.png"
+      width="4"
+      height="4"
+      alt="point"
+      border="0"
+    />
+    {rate.toUpperCase()}
+  </p>
+)

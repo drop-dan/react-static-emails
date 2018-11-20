@@ -10,9 +10,7 @@ const styleHeaderTag = `${app.toString()} ${offer.toString()} ${text.toString()}
 
 const Main = ({ preheaderText, children }) => (
   <div className="main">
-    <style jsx global>
-      {styleHeaderTag}
-    </style>
+    <style>{styleHeaderTag}</style>
 
     {preheaderText && (
       <div className="preheader-text">

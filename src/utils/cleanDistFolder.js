@@ -1,9 +1,9 @@
 import fs from 'fs'
 import path from 'path'
 
-export const noop = () => {}
+const noop = () => {}
 
-export function walk (dir) {
+function walk (dir) {
   return new Promise((resolve, reject) => {
     fs.readdir(dir, (error, files) => {
       if (error) {
@@ -32,3 +32,16 @@ export function walk (dir) {
     })
   })
 }
+
+async function cleanDistFolder () {
+  const files = await walk(path.resolve(__dirname, '../../dist'))
+  files.forEach(file => {
+    if (!file.match(/index\.html/)) {
+      fs.unlink(file, noop)
+    }
+  })
+  fs.rmdir(path.resolve(__dirname, '../../dist/404'), noop)
+  fs.rmdir(path.resolve(__dirname, '../../public'), noop)
+}
+
+export default cleanDistFolder
