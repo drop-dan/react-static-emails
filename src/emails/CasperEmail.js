@@ -5,7 +5,7 @@ const Offer = props => <Item {...props} button="Shop now" />
 
 // Subject: Black Friday week starts TOMORROW! Your deals inside
 
-const MultiplePartnersEmail = () => (
+const CasperEmail = () => (
   <Main preheaderText="Starting tomorrow, score the best deals on your favorite brands - only with Drop.">
     <Header />
 
@@ -37,4 +37,4 @@ const MultiplePartnersEmail = () => (
   </Main>
 )
 
-export default MultiplePartnersEmail
+export default CasperEmail
