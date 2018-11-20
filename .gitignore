@@ -7,6 +7,7 @@
 # production
 /dist
 /tmp
+/public
 
 # misc
 .DS_Store

@@ -77,5 +77,6 @@ export default {
       }
     })
     fs.rmdir(__dirname + '/dist/404', noop)
+    fs.rmdir(__dirname + '/public', noop)
   },
 }
