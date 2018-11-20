@@ -7,8 +7,10 @@ export { default as Footer } from './Footer'
 export { default as Item, OfferBlurb } from './Item'
 export { default as LogoBar } from './LogoBar'
 
-export const HeroImage = ({ image, alt }) => (
-  <img className="hero-image" src={image} width="500" height="400" border="0" alt={alt} />
+export const HeroImage = ({
+  width = '600', height = '600', image, alt,
+}) => (
+  <img className="hero-image" src={image} width={width} height={height} border="0" alt={alt} />
 )
 
 export const Link = ({ href, children, ...props }) => (
