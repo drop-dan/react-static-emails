@@ -25,5 +25,7 @@ export const Button = ({
 export const HeroImage = ({
   width = '600', height = '600', image, alt,
 }) => (
-  <img className="hero-image" src={image} width={width} height={height} border="0" alt={alt} />
+  <Link href="https://b.ewd.io/T3TSSpSvuR">
+    <img className="hero-image" src={image} width={width} height={height} border="0" alt={alt} />
+  </Link>
 )
