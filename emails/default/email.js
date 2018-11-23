@@ -5,7 +5,7 @@ const DefaultEmail = () => (
   <Main preheaderText="This is a test email">
     <Header />
 
-    <HeroImage image="https://s3.amazonaws.com/drop-web-font/default.png" />
+    <HeroImage image="default.png" />
 
     <div className="p2 mx-auto" style={{ maxWidth: 480 }}>
       <OfferBlurb

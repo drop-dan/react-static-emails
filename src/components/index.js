@@ -22,6 +22,10 @@ export const Button = ({
   </div>
 )
 
+export const Image = ({ src, ...props }) => (
+  <img src={`https://s3.amazonaws.com/drop-web-font/${src}`} {...props} />
+)
+
 export const HeroImage = ({
   width = '600',
   height = '600',
@@ -30,6 +34,6 @@ export const HeroImage = ({
   alt,
 }) => (
   <Link href={href}>
-    <img className="hero-image" src={image} width={width} height={height} border="0" alt={alt} />
+    <Image className="hero-image" src={image} width={width} height={height} border="0" alt={alt} />
   </Link>
 )

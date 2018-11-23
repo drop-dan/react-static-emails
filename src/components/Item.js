@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Button } from './'
+import { Button, Image } from './'
 
 const Item = ({
   image,
@@ -25,7 +25,7 @@ const Item = ({
       {pointRate && <PointRate rate={pointRate} oldRate={oldRate} size="small" />}
 
       {image && (
-        <img
+        <Image
           src={image}
           width={imageWidth}
           height={imageHeight}
@@ -80,21 +80,14 @@ export const OfferBlurb = ({
 
 const Logo = ({ image, brandName = 'brand' }) => (
   <div className="logo mx-auto">
-    <img src={image} width="100" height="100" alt={brandName} border="0" />
+    <Image src={image} width="100" height="100" alt={brandName} border="0" />
   </div>
 )
 
 const PointRate = ({ rate, oldRate, size = 'normal' }) => (
   <Fragment>
     <p className={`point-rate ${size}`} style={{ marginBottom: 5 }}>
-      <img
-        className="point-circle"
-        src="https://s3.amazonaws.com/drop-web-font/point.png"
-        width="4"
-        height="4"
-        alt="point"
-        border="0"
-      />
+      <Image className="point-circle" src="point.png" width="4" height="4" alt="point" border="0" />
       {rate.toUpperCase()}
     </p>
     <p className={`point-rate mt0 mb2 ${size}`} style={{ color: '#ccc', fontSize: 10 }}>

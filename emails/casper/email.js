@@ -9,7 +9,7 @@ const CasperEmail = () => (
   <Main preheaderText="Starting tomorrow, score the best deals on your favorite brands - only with Drop.">
     <Header />
 
-    <HeroImage image="https://s3.amazonaws.com/drop-web-font/casper-header.jpg" />
+    <HeroImage image="casper-header.jpg" />
 
     <div className="p2 mx-auto" style={{ maxWidth: 480 }}>
       <OfferBlurb
@@ -20,10 +20,10 @@ const CasperEmail = () => (
       <div className="divider" />
 
       <Offer
-        logo="https://s3.amazonaws.com/drop-web-font/casper.png"
+        logo="casper.png"
         brandName="Casper"
         pointRate="25,000"
-        image="https://s3.amazonaws.com/drop-web-font/mattress.jpg"
+        image="mattress.jpg"
         imageWidth="600"
         imageHeight="425"
         tagline="NEW"

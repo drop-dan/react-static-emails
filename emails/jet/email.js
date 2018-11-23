@@ -7,7 +7,7 @@ const JetEmail = () => (
   <Main preheaderText="Starting tomorrow, score the best deals on your favorite brands - only with Drop.">
     <Header />
 
-    <HeroImage image="https://s3.amazonaws.com/drop-web-font/jet/jet-header.jpg" />
+    <HeroImage image="jet/jet-header.jpg" />
 
     <div className="p2 mx-auto" style={{ maxWidth: 480 }}>
       <OfferBlurb
@@ -18,17 +18,17 @@ const JetEmail = () => (
       <div className="divider" />
 
       <Offer
-        image="https://s3.amazonaws.com/drop-web-font/jet/jet-her.png"
+        image="jet/jet-her.png"
         body="Plus, major sale alert. Score 25% off on Dynamite's Labour Day Special, on now thru Tuesday September 4th, 10AM ET. Extra points, extra savings."
       />
 
       <Offer
-        image="https://s3.amazonaws.com/drop-web-font/jet/jet-him.png"
+        image="jet/jet-him.png"
         body="Plus, major sale alert. Score 25% off on Dynamite's Labour Day Special, on now thru Tuesday September 4th, 10AM ET. Extra points, extra savings."
       />
 
       <Offer
-        image="https://s3.amazonaws.com/drop-web-font/jet/jet-kids.png"
+        image="jet/jet-kids.png"
         body="Plus, major sale alert. Score 25% off on Dynamite's Labour Day Special, on now thru Tuesday September 4th, 10AM ET. Extra points, extra savings."
         divider={false}
       />
