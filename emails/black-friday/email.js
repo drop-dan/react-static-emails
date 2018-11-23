@@ -5,10 +5,7 @@ const BlackFridayEmail = () => (
   <Main preheaderText="Starting tomorrow, score the best deals on your favorite brands - only with Drop.">
     <Header />
 
-    <HeroImage
-      href="https://b.ewd.io/BlackFridayCA"
-      image="https://s3.amazonaws.com/drop-web-font/black-friday/bf-header.gif"
-    />
+    <HeroImage href="https://b.ewd.io/BlackFridayCA" image="black-friday/bf-header.gif" />
 
     <div className="p2 mx-auto" style={{ maxWidth: 480 }}>
       <OfferBlurb
@@ -19,7 +16,7 @@ const BlackFridayEmail = () => (
       <div className="divider" />
 
       <Item
-        logo="https://s3.amazonaws.com/drop-web-font/black-friday/indigo.png"
+        logo="black-friday/indigo.png"
         brandName="Indigo"
         body="Shop home, toys for the tykes in your life, and new holiday reads - for you. Take up to 40% off, with 1000s of new items on sale."
         link="https://b.ewd.io/BFLIndigo"
@@ -29,7 +26,7 @@ const BlackFridayEmail = () => (
       />
 
       <Item
-        logo="https://s3.amazonaws.com/drop-web-font/black-friday/forever21.png"
+        logo="black-friday/forever21.png"
         brandName="Forever 21"
         body="Today only, enjoy 30% off site-wide with promo code TGIBF."
         link="https://b.ewd.io/BFForever21"
@@ -39,7 +36,7 @@ const BlackFridayEmail = () => (
       />
 
       <Item
-        logo="https://s3.amazonaws.com/drop-web-font/black-friday/casper.png"
+        logo="black-friday/casper.png"
         brandName="Casper"
         body="A spring in your step is good. A spring in your back is bad. Take 10% off mattress orders."
         link="https://b.ewd.io/BFCACasper"
@@ -49,7 +46,7 @@ const BlackFridayEmail = () => (
       />
 
       <Item
-        logo="https://s3.amazonaws.com/drop-web-font/black-friday/evernew.png"
+        logo="black-friday/evernew.png"
         brandName="Ever New"
         body="Ever deals. Take 25% off everything for Black Friday."
         link="https://b.ewd.io/BFLEverNew"
@@ -59,7 +56,7 @@ const BlackFridayEmail = () => (
       />
 
       <Item
-        logo="https://s3.amazonaws.com/drop-web-font/black-friday/warby.png"
+        logo="black-friday/warby.png"
         brandName="Warby Parker"
         body="Expect better specs. Shop Warby Parker and get 30% back in points."
         link="https://b.ewd.io/BFLWarbyCA"
@@ -69,7 +66,7 @@ const BlackFridayEmail = () => (
       />
 
       <Item
-        logo="https://s3.amazonaws.com/drop-web-font/black-friday/charlottetilbury.png"
+        logo="black-friday/charlottetilbury.png"
         brandName="Charlotte Tilbury"
         body="Blush, please. Take 40% off Smokey Eye Beauty, and morning and nighttime Skincare Kits."
         link="https://b.ewd.io/BFLCharlotteCA"
@@ -79,7 +76,7 @@ const BlackFridayEmail = () => (
       />
 
       <Item
-        logo="https://s3.amazonaws.com/drop-web-font/black-friday/frankandoak.png"
+        logo="black-friday/frankandoak.png"
         brandName="Frank & Oak"
         body="Sweater weather isn't going anywhere. Stock up with 30% off everything*."
         link="https://b.ewd.io/BFLFrankCA"
