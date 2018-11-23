@@ -7,15 +7,14 @@ const getEmailComponent = () => {
     emails[key.replace('./', '').replace('/email.js', '')] = context(key).default
   })
 
-  const emailKey = process.argv[2] || 'default'
+  let emailKey = process.argv[2] || 'default'
 
-  // TOOD: this makes dev mode email name work
-  // if (document) {
-  //   const metaTag = document.getElementsByTagName('meta')[3]
-  //   if (metaTag) {
-  //     emailKey = metaTag.getAttribute('content')
-  //   }
-  // }
+  if (process.title === 'browser') {
+    const metaTag = document.getElementsByTagName('meta')[3]
+    if (metaTag) {
+      emailKey = metaTag.getAttribute('content')
+    }
+  }
 
   const EmailComponent = emails[emailKey] || emails.default
   return () => <EmailComponent />
