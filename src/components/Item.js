@@ -42,17 +42,26 @@ const Item = ({
       )}
 
       {title && (
-        <h3 className="mt2 mb1" align="center" bgcolor="#F5F7FA">
+        <h3 className="mt2 mb3" align="center" bgcolor="#F5F7FA">
           {title}
         </h3>
       )}
 
-      <p className="mt0 mb2" align="center" bgcolor="#F5F7FA">
-        {body}
-      </p>
+      {body.match(/<br>/) &&
+        body.split('<br>').map((item, i, arr) => (
+          <p className={`mt0 ${i === arr.length - 1 ? 'mb2' : 'mb0'}`} key={i}>
+            {item}
+          </p>
+        ))}
+
+      {!body.match(/<br>/) && (
+        <p className="mt0 mb2" align="center" bgcolor="#F5F7FA">
+          {body}
+        </p>
+      )}
 
       {button && (
-        <Button href={link} className="wide mt3 mb2 mx-auto">
+        <Button href={link} className="wide mt2 mb2 mx-auto">
           {button}
         </Button>
       )}
