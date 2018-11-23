@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { hot } from 'react-hot-loader'
-import JetEmail from '../emails/templates/JetEmail'
+import getEmailComponent from './utils/getEmailComponent'
 
-const Email = () => <JetEmail />
+const Email = getEmailComponent()
 
 export default hot(module)(Email)
 

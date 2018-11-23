@@ -23,9 +23,13 @@ export const Button = ({
 )
 
 export const HeroImage = ({
-  width = '600', height = '600', image, alt,
+  width = '600',
+  height = '600',
+  href = 'https://b.ewd.io/T3TSSpSvuR',
+  image,
+  alt,
 }) => (
-  <Link href="https://b.ewd.io/T3TSSpSvuR">
+  <Link href={href}>
     <img className="hero-image" src={image} width={width} height={height} border="0" alt={alt} />
   </Link>
 )

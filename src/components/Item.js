@@ -13,15 +13,16 @@ const Item = ({
   body,
   button,
   pointRate,
+  oldRate,
   divider = true,
 }) => (
   <Fragment>
     <div className="item-wrap mt1">
       {logo && <Logo image={logo} brandName="title" />}
 
-      {brandName && <h2 className="mt3 mb0">{brandName}</h2>}
+      {brandName && <h2 className="mt3 mb1">{brandName}</h2>}
 
-      {pointRate && <PointRate rate={pointRate} size="small" />}
+      {pointRate && <PointRate rate={pointRate} oldRate={oldRate} size="small" />}
 
       {image && (
         <img
@@ -83,16 +84,21 @@ const Logo = ({ image, brandName = 'brand' }) => (
   </div>
 )
 
-const PointRate = ({ rate, size = 'normal' }) => (
-  <p className={`point-rate ${size}`}>
-    <img
-      className="point-circle"
-      src="https://s3.amazonaws.com/drop-web-font/point.png"
-      width="4"
-      height="4"
-      alt="point"
-      border="0"
-    />
-    {rate.toUpperCase()}
-  </p>
+const PointRate = ({ rate, oldRate, size = 'normal' }) => (
+  <Fragment>
+    <p className={`point-rate ${size}`} style={{ marginBottom: 5 }}>
+      <img
+        className="point-circle"
+        src="https://s3.amazonaws.com/drop-web-font/point.png"
+        width="4"
+        height="4"
+        alt="point"
+        border="0"
+      />
+      {rate.toUpperCase()}
+    </p>
+    <p className={`point-rate mt0 mb2 ${size}`} style={{ color: '#ccc', fontSize: 10 }}>
+      {oldRate && oldRate.toUpperCase()}
+    </p>
+  </Fragment>
 )

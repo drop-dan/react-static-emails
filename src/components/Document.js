@@ -7,12 +7,13 @@ const fontString = ['Sailec_normal', 'Sailec-Medium_500', 'Sailec-Bold_bold'].ma
   getFontString(...string.split('_'))
 )
 
-const Document = ({ children }) => (
+const Document = ({ children, siteData }) => (
   <html lang="en">
     <head>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="x-apple-disable-message-reformatting" />
+      <meta name="email-name" content={siteData.email} />
       <style>{fontString}</style>
     </head>
     <body
