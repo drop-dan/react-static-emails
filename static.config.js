@@ -12,10 +12,6 @@ export default {
 
   Document: DocumentComponent,
 
-  webpack: (config, args) => {
-    return config
-  },
-
   paths: {
     root: process.cwd(),
     src: 'src',
@@ -27,6 +23,7 @@ export default {
   getSiteData: () => ({ email, title: email }),
 
   renderToHtml: async (render, Component) => {
-    inlineCss(render(<Component test="test" />), { url: 'http' }).then(html => html)
+    const html = await inlineCss(render(<Component />), { url: 'http' })
+    return html
   },
 }
