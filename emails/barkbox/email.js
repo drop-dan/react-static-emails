@@ -2,7 +2,7 @@ import React from 'react'
 import { Main, Header, HeroImage, OfferBlurb, Footer, Item } from '../../src/components'
 
 const BarkboxEmail = () => (
-  <Main preheaderText="Starting tomorrow, score the best deals on your favorite brands - only with Drop.">
+  <Main preheaderText="Make your dog’s heart grow three sizes with a monthly delivery of toys, treats, and chews, so your dog can celebrate the holidays while you stay Grinchy!">
     <Header />
 
     <HeroImage href="https://b.ewd.io/BFBarkBox" image="barkbox/header.gif" />
