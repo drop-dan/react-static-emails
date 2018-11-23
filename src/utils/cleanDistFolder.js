@@ -1,6 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 
+const email = process.argv[2] || 'default'
+
 const noop = () => {}
 
 function walk (dir) {
@@ -34,13 +36,13 @@ function walk (dir) {
 }
 
 async function cleanDistFolder () {
-  const files = await walk(path.resolve(__dirname, '../../dist'))
+  const files = await walk(path.resolve(__dirname, `../../emails/${email}/html`))
   files.forEach(file => {
-    if (!file.match(/index\.html/)) {
+    if (!file.match(/index\.html|email\.js/)) {
       fs.unlink(file, noop)
     }
   })
-  fs.rmdir(path.resolve(__dirname, '../../dist/404'), noop)
+  fs.rmdir(path.resolve(__dirname, `../../emails/${email}/html/404`), noop)
   fs.rmdir(path.resolve(__dirname, '../../public'), noop)
 }
 
