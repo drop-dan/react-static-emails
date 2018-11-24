@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { LogoBar } from './'
 
 export { default as Main } from './Main'
 export { default as Footer } from './Footer'
-export { default as Item, OfferBlurb } from './Item'
+export { default as Item } from './Item'
+export { default as ItemRow } from './ItemRow'
 export { default as LogoBar } from './LogoBar'
 
 export const Header = () => <LogoBar />
@@ -36,4 +37,59 @@ export const HeroImage = ({
   <Link href={href}>
     <Image className="hero-image" src={image} width={width} height={height} border="0" alt={alt} />
   </Link>
+)
+
+export const Logo = ({ image, className, brandName = 'brand' }) => (
+  <div className={`logo ${className}`}>
+    <Image src={image} width="100" height="100" alt={brandName} border="0" />
+  </div>
+)
+
+export const PointRate = ({ rate, oldRate, size = 'normal' }) => (
+  <Fragment>
+    <p className={`point-rate ${size}`} style={{ marginBottom: 5 }}>
+      <Image className="point-circle" src="point.png" width="4" height="4" alt="point" border="0" />
+      {rate.toUpperCase()}
+    </p>
+    <p className={`point-rate mt0 mb2 ${size}`} style={{ color: '#ccc', fontSize: 10 }}>
+      {oldRate && oldRate.toUpperCase()}
+    </p>
+  </Fragment>
+)
+
+export const PointRateRow = ({ rate, oldRate, size = 'normal' }) => (
+  <Fragment>
+    <p className={`point-rate ${size}`} style={{ marginBottom: 5, display: 'inline' }}>
+      <Image className="point-circle" src="point.png" width="4" height="4" alt="point" border="0" />
+      {rate.toUpperCase()}
+    </p>
+    {oldRate && (
+      <p
+        className={`point-rate my0 ${size}`}
+        style={{
+          color: '#ccc',
+          fontSize: 10,
+          display: 'inline',
+          marginLeft: 10,
+          textDecoration: 'line-through',
+        }}
+      >
+        {oldRate.toUpperCase()}
+      </p>
+    )}
+  </Fragment>
+)
+
+export const OfferBlurb = ({
+  title, pointRate, description, button,
+}) => (
+  <Fragment>
+    <h1 className="mt4 mb0">{title}</h1>
+
+    {pointRate && <PointRate rate={pointRate} />}
+
+    <p className="my1 large">{description}</p>
+
+    {button}
+  </Fragment>
 )

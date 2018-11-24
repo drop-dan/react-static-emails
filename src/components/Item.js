@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Button, Image } from './'
+import { Button, Image, Logo, PointRate } from './'
 
 const Item = ({
   image,
@@ -18,7 +18,7 @@ const Item = ({
 }) => (
   <Fragment>
     <div className="item-wrap mt1">
-      {logo && <Logo image={logo} brandName="title" />}
+      {logo && <Logo image={logo} className="mx-auto" brandName="title" />}
 
       {brandName && <h2 className="mt3 mb1">{brandName}</h2>}
 
@@ -72,35 +72,3 @@ const Item = ({
 )
 
 export default Item
-
-export const OfferBlurb = ({
-  title, pointRate, description, button,
-}) => (
-  <Fragment>
-    <h1 className="mt4 mb0">{title}</h1>
-
-    {pointRate && <PointRate rate={pointRate} />}
-
-    <p className="my1 large">{description}</p>
-
-    {button}
-  </Fragment>
-)
-
-const Logo = ({ image, brandName = 'brand' }) => (
-  <div className="logo mx-auto">
-    <Image src={image} width="100" height="100" alt={brandName} border="0" />
-  </div>
-)
-
-const PointRate = ({ rate, oldRate, size = 'normal' }) => (
-  <Fragment>
-    <p className={`point-rate ${size}`} style={{ marginBottom: 5 }}>
-      <Image className="point-circle" src="point.png" width="4" height="4" alt="point" border="0" />
-      {rate.toUpperCase()}
-    </p>
-    <p className={`point-rate mt0 mb2 ${size}`} style={{ color: '#ccc', fontSize: 10 }}>
-      {oldRate && oldRate.toUpperCase()}
-    </p>
-  </Fragment>
-)
