@@ -12,11 +12,7 @@ const Main = ({ preheaderText, children }) => (
   <div className="main">
     <style>{styleHeaderTag}</style>
 
-    {preheaderText && (
-      <div className="preheader-text">
-        Starting tomorrow, score the best deals on your favorite brands - only with Drop.
-      </div>
-    )}
+    {preheaderText && <div className="preheader-text">{preheaderText}</div>}
 
     <div>{children}</div>
   </div>
