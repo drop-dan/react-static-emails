@@ -49,7 +49,7 @@ const Item = ({
 
       {body.match(/<br>/) &&
         body.split('<br>').map((item, i, arr) => (
-          <p className={`mt0 ${i === arr.length - 1 ? 'mb2' : 'mb0'}`} key={i}>
+          <p className={`mt0 ${i === arr.length - 1 ? 'mb3' : 'mb2'}`} key={i}>
             {item}
           </p>
         ))}
