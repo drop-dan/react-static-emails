@@ -3,6 +3,7 @@ Add proptypes to components
 Add compression and resizing to images
 Add git automation scripts
 rename component props for marketing needs
+remove react static and replace with webpack
 
 SETUP:
 install vscode

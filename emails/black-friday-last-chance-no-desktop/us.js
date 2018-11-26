@@ -62,7 +62,7 @@ const BlackFridayEmail = () => (
     <Image
       href="https://b.ewd.io/BFLastChance2"
       width="600"
-      src="black-friday-last-chance-no-desktop/image.png"
+      src="black-friday-last-chance-no-desktop/us_image.png"
       style={{ width: '100%', maxWidth: 600 }}
     />
 

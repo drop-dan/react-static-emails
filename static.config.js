@@ -4,6 +4,7 @@ import cleanDistFolder from './src/utils/cleanDistFolder'
 import DocumentComponent from './src/components/Document'
 
 const email = process.argv[2] || 'default'
+const filename = process.argv[3] || 'email'
 
 export default {
   siteRoot: 'https://www.earnwithdrop.com',
@@ -20,7 +21,7 @@ export default {
     public: 'public',
   },
 
-  getSiteData: () => ({ email, title: email }),
+  getSiteData: () => ({ email, filename, title: email }),
 
   renderToHtml: async (render, Component) => {
     const html = await inlineCss(render(<Component />), { url: 'http' })

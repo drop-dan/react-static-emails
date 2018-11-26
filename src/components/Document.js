@@ -14,6 +14,7 @@ const Document = ({ children, siteData }) => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="x-apple-disable-message-reformatting" />
       <meta name="email-name" content={siteData.email} />
+      <meta name="filename" content={siteData.filename} />
       <style>{fontString}</style>
     </head>
     <body
