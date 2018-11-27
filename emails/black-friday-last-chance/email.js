@@ -1,5 +1,5 @@
 import React from 'react'
-import { Main, Header, HeroImage, OfferBlurb, Footer, Item, Image } from '../../src/components'
+import { Main, Header, HeroImage, OfferBlurb, Footer, Offer, Image } from '../../src/components'
 
 const BlackFridayEmail = () => (
   <Main preheaderText="Score the best deals on your favorite brands - only with Drop. Shop our picks below via desktop, tablet, mobile - or however else you like to shop.">
@@ -21,7 +21,7 @@ const BlackFridayEmail = () => (
         "{% set offerUrl = 'https://www.earnwithdrop.com/user_offers/' ~ userOfferId ~ '/start?suid=' ~ userAttribute.suid %}"
       }
       {"{% if offerId == '655' %}"}
-      <Item
+      <Offer
         brand="New Balance"
         body="LAST CHANCE for 25% off and 10% back in points with code BLACKFRIDAY25. Take it."
         pointRate="100 per $1"
@@ -29,7 +29,7 @@ const BlackFridayEmail = () => (
         link="{{ offerUrl }}"
       />
       {"{% elif offerId == '399' %}"}
-      <Item
+      <Offer
         brand="Barkbox"
         body="December's limited edition Grinch-themed Barkbox has your pup's name on it. Don't miss out on an extra FREE toy in every box - all through the year. Plus, take $40 back in points."
         pointRate="40,000"
@@ -37,7 +37,7 @@ const BlackFridayEmail = () => (
         link="{{ offerUrl }}"
       />
       {"{% elif offerId == '743' %}"}
-      <Item
+      <Offer
         brand="Hayneedle"
         body="Outfit your home in holiday and save up to 60%! Shop Hayneedle's Christmas trees, indoor and outdoor fire pits, and more."
         pointRate="80 PER $1"
@@ -45,7 +45,7 @@ const BlackFridayEmail = () => (
         link="{{ offerUrl }}"
       />
       {"{% elif offerId == '463' %}"}
-      <Item
+      <Offer
         brand="Gap"
         body="Your sweater collection just got a little thicker. Stay cozy in the cold with Gap's classic knits + today only, score 40% off."
         pointRate="100 PER $1"
@@ -53,7 +53,7 @@ const BlackFridayEmail = () => (
         link="{{ offerUrl }}"
       />
       {"{% elif offerId == '647' %}"}
-      <Item
+      <Offer
         brand="Sephora"
         body="Deals that will make you blush. The best stocking stuffers for every beauty buff on your list - now for $15 and under (while supplies last)."
         pointRate="80 PER $1"
@@ -61,7 +61,7 @@ const BlackFridayEmail = () => (
         link="{{ offerUrl }}"
       />
       {"{% elif offerId == '674' %}"}
-      <Item
+      <Offer
         brand="Macy’s"
         body="The store that has it all has you covered. Save on all your festive faves + take 20% off with code BLKFRI."
         pointRate="50 PER $1"
@@ -69,7 +69,7 @@ const BlackFridayEmail = () => (
         link="{{ offerUrl }}"
       />
       {"{% elif offerId == '778' %}"}
-      <Item
+      <Offer
         brand="Lululemon"
         body="Save up to 50% off select gear designed to last keep you moving, year-round. Eat, sleep, eggnog, yoga."
         pointRate="50 PER $1"
@@ -77,7 +77,7 @@ const BlackFridayEmail = () => (
         link="{{ offerUrl }}"
       />
       {"{% elif offerId == '314' %}"}
-      <Item
+      <Offer
         brand="Bloomingdales"
         body="Add a little luxe to your everyday with a signature brown bag to boot. Plus, score savings of up to 60% on home, fashion, accessories, and more."
         pointRate="15 PER $1"
@@ -85,7 +85,7 @@ const BlackFridayEmail = () => (
       />
 
       {"{% elif offerId == '445' %}"}
-      <Item
+      <Offer
         brand="Forever 21"
         body="Don't be a holiday party outfit repeater. At up to 70% off, it's a no-brainer. Hurry, deals end SOON "
         pointRate="80 PER $1"

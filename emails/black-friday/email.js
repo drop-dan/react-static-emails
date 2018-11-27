@@ -1,5 +1,5 @@
 import React from 'react'
-import { Main, Header, HeroImage, OfferBlurb, Footer, Item, Button } from '../../src/components'
+import { Main, Header, HeroImage, OfferBlurb, Footer, Offer, Button } from '../../src/components'
 
 const BlackFridayEmail = () => (
   <Main preheaderText="Starting tomorrow, score the best deals on your favorite brands - only with Drop.">
@@ -15,7 +15,7 @@ const BlackFridayEmail = () => (
 
       <div className="divider" />
 
-      <Item
+      <Offer
         brand="Indigo"
         body="Shop home, toys for the tykes in your life, and new holiday reads - for you. Take up to 40% off, with 1000s of new items on sale."
         link="https://b.ewd.io/BFLIndigo"
@@ -23,7 +23,7 @@ const BlackFridayEmail = () => (
         oldRate="was 30 per $1"
       />
 
-      <Item
+      <Offer
         brand="Forever 21"
         body="Today only, enjoy 30% off site-wide with promo code TGIBF."
         link="https://b.ewd.io/BFForever21"
@@ -31,7 +31,7 @@ const BlackFridayEmail = () => (
         oldRate="was 20 per $1"
       />
 
-      <Item
+      <Offer
         brand="Casper"
         body="A spring in your step is good. A spring in your back is bad. Take 10% off mattress orders."
         link="https://b.ewd.io/BFCACasper"
@@ -39,7 +39,7 @@ const BlackFridayEmail = () => (
         oldRate="was 75 per $1"
       />
 
-      <Item
+      <Offer
         brand="Evernew"
         body="Ever deals. Take 25% off everything for Black Friday."
         link="https://b.ewd.io/BFLEverNew"
@@ -47,7 +47,7 @@ const BlackFridayEmail = () => (
         oldRate="was 50 per $1"
       />
 
-      <Item
+      <Offer
         brand="Warby Parker"
         body="Expect better specs. Shop Warby Parker and get 30% back in points."
         link="https://b.ewd.io/BFLWarbyCA"
@@ -55,7 +55,7 @@ const BlackFridayEmail = () => (
         oldRate="was 200 per $1"
       />
 
-      <Item
+      <Offer
         brand="Charlotte Tilbury"
         body="Blush, please. Take 40% off Smokey Eye Beauty, and morning and nighttime Skincare Kits."
         link="https://b.ewd.io/BFLCharlotteCA"
@@ -63,7 +63,7 @@ const BlackFridayEmail = () => (
         oldRate="was 50 per $1"
       />
 
-      <Item
+      <Offer
         brand="Frank & Oak"
         body="Sweater weather isn't going anywhere. Stock up with 30% off everything*."
         link="https://b.ewd.io/BFLFrankCA"

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Main, Header, HeroImage, OfferBlurb, Footer, Item } from '../../src/components'
+import { Main, Header, HeroImage, OfferBlurb, Footer, Offer } from '../../src/components'
 
-const Offer = props => <Item {...props} imageWidth="600" imageHeight="600" button="Shop now" />
+const Offer = props => <Offer {...props} imageWidth="600" imageHeight="600" button="Shop now" />
 
 const JetEmail = () => (
   <Main preheaderText="Starting tomorrow, score the best deals on your favorite brands - only with Drop.">

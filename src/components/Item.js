@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { Button, Image, Logo, PointRate } from './'
 import brandData from '../utils/brandData'
 
-const Item = ({
+const Offer = ({
   image,
   imageWidth = '300',
   imageHeight = '300',
@@ -72,4 +72,4 @@ const Item = ({
   </Fragment>
 )
 
-export default Item
+export default Offer

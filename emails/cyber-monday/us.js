@@ -1,5 +1,5 @@
 import React from 'react'
-import { Main, Header, HeroImage, OfferBlurb, Footer, Item, Button } from '../../src/components'
+import { Main, Header, HeroImage, OfferBlurb, Footer, Offer, Button } from '../../src/components'
 
 const CyberMondayEmail = () => (
   <Main preheaderText="Today only, shop through Drop and get up to 30% back in points, just like that.">
@@ -24,7 +24,7 @@ const CyberMondayEmail = () => (
 
       <div className="divider" />
 
-      <Item
+      <Offer
         brand="ClassPass"
         pointRate="15,000"
         oldRate="12,000"
@@ -32,7 +32,7 @@ const CyberMondayEmail = () => (
         link="https://b.ewd.io/CMClassPass"
       />
 
-      <Item
+      <Offer
         brand="Kobo"
         pointRate="10,000"
         oldRate="5,000"
@@ -40,7 +40,7 @@ const CyberMondayEmail = () => (
         link="https://b.ewd.io/CMKoboUS"
       />
 
-      <Item
+      <Offer
         brand="Jet.&#8203;com"
         pointRate="80 PER $1"
         oldRate="40 PER $1"
@@ -48,14 +48,14 @@ const CyberMondayEmail = () => (
         link="https://b.ewd.io/CMJet"
       />
 
-      <Item
+      <Offer
         brand="New Balance"
         pointRate="15,000"
         body="Tackle your fitness resolution a month early. Take 30% off with code CYBERMONDAY30, today only."
         link="https://b.ewd.io/CMJet"
       />
 
-      <Item
+      <Offer
         brand="Tatcha"
         pointRate="100 PER $1"
         oldRate="50 PER $1"
@@ -63,7 +63,7 @@ const CyberMondayEmail = () => (
         link="https://b.ewd.io/CMTatcha"
       />
 
-      <Item
+      <Offer
         brand="Charlotte Tilbury"
         pointRate="80 PER $1"
         oldRate="50 PER $1"
@@ -71,7 +71,7 @@ const CyberMondayEmail = () => (
         link="https://b.ewd.io/CMCharlotte"
       />
 
-      <Item
+      <Offer
         brand="Frank And Oak"
         pointRate="60 PER $1"
         oldRate="50 PER $1"
@@ -79,7 +79,7 @@ const CyberMondayEmail = () => (
         link="https://b.ewd.io/CMFrank"
       />
 
-      <Item
+      <Offer
         brand="S'well"
         pointRate="110 PER $1"
         oldRate="50 PER $1"

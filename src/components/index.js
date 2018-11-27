@@ -4,7 +4,7 @@ import brandData from '../utils/brandData'
 
 export { default as Main } from './Main'
 export { default as Footer } from './Footer'
-export { default as Item } from './Item'
+export { default as Offer } from './Offer'
 export { default as ItemRow } from './ItemRow'
 export { default as LogoBar } from './LogoBar'
 

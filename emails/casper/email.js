@@ -1,5 +1,5 @@
 import React from 'react'
-import { Main, Header, HeroImage, OfferBlurb, Footer, Item } from '../../src/components'
+import { Main, Header, HeroImage, OfferBlurb, Footer, Offer } from '../../src/components'
 
 // Subject: Black Friday week starts TOMORROW! Your deals inside
 
@@ -17,7 +17,7 @@ const CasperEmail = () => (
 
       <div className="divider" />
 
-      <Item
+      <Offer
         brand="Casper"
         pointRate="25,000"
         image="mattress.jpg"

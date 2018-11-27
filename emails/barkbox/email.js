@@ -1,5 +1,5 @@
 import React from 'react'
-import { Main, Header, HeroImage, OfferBlurb, Footer, Item } from '../../src/components'
+import { Main, Header, HeroImage, OfferBlurb, Footer, Offer } from '../../src/components'
 
 const BarkboxEmail = () => (
   <Main preheaderText="This holiday season, don't forget Fido. Make your dog’s heart grow three sizes with a monthly delivery of toys, treats, and chews, so your dog can celebrate the holidays while you stay Grinchy!">
@@ -12,7 +12,7 @@ const BarkboxEmail = () => (
 
       <div className="my4" />
 
-      <Item
+      <Offer
         pointRate="40,000"
         oldRate="was 20,000"
         title="The Limited-Edition Grinch BarkBox has arrived!"

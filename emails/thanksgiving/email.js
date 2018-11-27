@@ -1,5 +1,5 @@
 import React from 'react'
-import { Main, Header, HeroImage, OfferBlurb, Footer, Item } from '../../src/components'
+import { Main, Header, HeroImage, OfferBlurb, Footer, Offer } from '../../src/components'
 
 const ThanksGivingEmail = () => (
   <Main preheaderText="This Thanksgiving, cozy up on the couch. It's time to give thanks for friends, family - and football.">
@@ -15,7 +15,7 @@ const ThanksGivingEmail = () => (
 
       <div className="divider" />
 
-      <Item
+      <Offer
         image="thanksgiving/thanksgiving-image.jpg"
         tagline="NEW"
         title="Get Your $5 Free Play Credit"
