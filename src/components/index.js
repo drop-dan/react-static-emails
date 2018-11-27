@@ -95,7 +95,7 @@ export const OfferBlurb = ({
 
     {pointRate && <PointRate rate={pointRate} />}
 
-    <p className="my1 large">{description}</p>
+    {typeof description === 'string' ? <p className="my1 large">{description}</p> : description}
 
     {button}
   </Fragment>

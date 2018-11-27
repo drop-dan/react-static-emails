@@ -42,7 +42,8 @@ h3 {
 }
 
 p,
-a {
+a,
+li {
   font-weight: normal;
   letter-spacing: -1.1px;
   color: #a3a3a3;
@@ -50,7 +51,17 @@ a {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.25px;
-  color: #68686d;
+  color: #585858;
+}
+
+ol {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+ol li {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 p.large,
@@ -106,4 +117,8 @@ p.point-rate.small .point-circle {
   width: 8px;
   height: 8px;
   border-radius: 4px;
+}
+
+.light-gray {
+  color: #a3a3a3;
 }
