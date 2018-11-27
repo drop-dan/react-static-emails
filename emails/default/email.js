@@ -10,7 +10,7 @@ const DefaultEmail = () => (
     <div className="p2 mx-auto" style={{ maxWidth: 480 }}>
       <OfferBlurb
         title="Nothing to see here"
-        description="You entered an email name that doesn't exist. Or maybe I broke something ¯\_(ツ)_/¯"
+        body="You entered an email name that doesn't exist. Or maybe I broke something ¯\_(ツ)_/¯"
       />
     </div>
 

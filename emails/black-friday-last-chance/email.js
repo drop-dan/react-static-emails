@@ -10,7 +10,7 @@ const BlackFridayEmail = () => (
     <div className="p2 mx-auto" style={{ maxWidth: 480 }}>
       <OfferBlurb
         title="Hurry, promotions end tonight ⏳"
-        description="Score the best deals on your favorite brands - only with Drop. Shop our picks below via desktop, tablet, mobile - or however else you like to shop."
+        body="Score the best deals on your favorite brands - only with Drop. Shop our picks below via desktop, tablet, mobile - or however else you like to shop."
       />
 
       <div className="divider" />

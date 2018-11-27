@@ -10,7 +10,7 @@ const ThanksGivingEmail = () => (
     <div className="p2 mx-auto" style={{ maxWidth: 480 }}>
       <OfferBlurb
         title="Happy Thanksgiving"
-        description="This Thanksgiving, cozy up on the couch. It's time to give thanks for friends, family - and football."
+        body="This Thanksgiving, cozy up on the couch. It's time to give thanks for friends, family - and football."
       />
 
       <div className="divider" />

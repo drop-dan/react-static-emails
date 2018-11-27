@@ -10,7 +10,7 @@ const CyberMondayEmail = () => (
     <div className="p2 mx-auto" style={{ maxWidth: 480 }}>
       <OfferBlurb
         title="It's Cy-burr Monday. Stay home."
-        description="Today only, shop through Drop and get up to 30% back in points, just like that."
+        body="Today only, shop through Drop and get up to 30% back in points, just like that."
         button={
           <Button
             href="https://b.ewd.io/CyberMondayUS"

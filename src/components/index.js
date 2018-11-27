@@ -24,8 +24,8 @@ export const Button = ({
   </div>
 )
 
-export const Image = ({ src, ...props }) => (
-  <img src={`https://s3.amazonaws.com/drop-web-font/${src}`} {...props} />
+export const Image = ({ src, alt = '', ...props }) => (
+  <img src={`https://s3.amazonaws.com/drop-web-font/${src}`} alt={alt} {...props} />
 )
 
 export const HeroImage = ({
@@ -88,14 +88,14 @@ export const PointRateRow = ({ rate, oldRate, size = 'normal' }) => (
 )
 
 export const OfferBlurb = ({
-  title, pointRate, description, button,
+  title, pointRate, body, button,
 }) => (
   <Fragment>
     <h1 className="mt4 mb0">{title}</h1>
 
     {pointRate && <PointRate rate={pointRate} />}
 
-    {typeof description === 'string' ? <p className="my1 large">{description}</p> : description}
+    {typeof body === 'string' ? <p className="my1 large">{body}</p> : body}
 
     {button}
   </Fragment>

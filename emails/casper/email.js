@@ -12,7 +12,7 @@ const CasperEmail = () => (
     <div className="p2 mx-auto" style={{ maxWidth: 480 }}>
       <OfferBlurb
         title="10% Off, 10% Back"
-        description="This Black Friday, Enjoy 10% off your next mattress order.  Plus, get 10% back in points."
+        body="This Black Friday, Enjoy 10% off your next mattress order.  Plus, get 10% back in points."
       />
 
       <div className="divider" />

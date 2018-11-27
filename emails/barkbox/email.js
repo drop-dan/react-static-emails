@@ -19,7 +19,6 @@ const BarkboxEmail = () => (
         body={`Make your dog’s heart grow three sizes with a monthly delivery of toys, treats, and chews, so your dog can celebrate the holidays while you stay Grinchy!
         <br>Every box includes a FREE Max Antler toy wearable for your pup, along with two original toys, two full-bags of all-natural treats, and a scrumptious USA-made chew. + Black Friday special! Get an extra toy in every box!
         `}
-        button="Shop now"
         link="https://b.ewd.io/BFBarkBox"
         divider={false}
       />
