@@ -13,7 +13,7 @@ const brands = {
   Hayneedle: { name: 'Hayneedle', logo: 'hayneedle.png' },
   'Hello Fresh': { name: 'HelloFresh', logo: 'hellofresh.png' },
   Indigo: { name: 'Indigo', logo: 'indigo.png' },
-  'Jet.com': { name: 'Jet&#8203;.com', logo: 'jet.png' },
+  Jet: { name: 'Jet.com', logo: 'jet.png' },
   Kobo: { name: 'Kobo', logo: 'kobo_us.png' },
   Lululemon: { name: 'Lululemon', logo: 'lululemon.png' },
   "Macy's": { name: "Macy's", logo: 'macys.png' },

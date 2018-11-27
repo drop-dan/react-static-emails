@@ -5,7 +5,7 @@ import brandData from '../utils/brandData'
 export { default as Main } from './Main'
 export { default as Footer } from './Footer'
 export { default as Offer } from './Offer'
-export { default as ItemRow } from './ItemRow'
+export { default as OfferRow } from './OfferRow'
 export { default as LogoBar } from './LogoBar'
 
 export const Header = () => <LogoBar />
@@ -52,37 +52,16 @@ export const Logo = ({ image, className, brand = 'brand' }) => {
   )
 }
 
-export const PointRate = ({ rate, oldRate, size = 'normal' }) => (
+export const PointRate = ({
+  rate, oldRate, row, className = 'normal',
+}) => (
   <Fragment>
-    <p className={`point-rate ${size}`} style={{ marginBottom: 5 }}>
-      <Image className="point-circle" src="point.png" width="4" height="4" alt="point" border="0" />
-      {rate.toUpperCase()}
-    </p>
-    <p className={`point-rate mt0 mb2 ${size}`} style={{ color: '#ccc', fontSize: 10 }}>
-      {oldRate && oldRate.toUpperCase()}
-    </p>
-  </Fragment>
-)
-
-export const PointRateRow = ({ rate, oldRate, size = 'normal' }) => (
-  <Fragment>
-    <p className={`point-rate ${size}`} style={{ marginBottom: 5, display: 'inline' }}>
+    <p className={`point-rate${row ? '-row' : ''} ${className}`} style={{ marginBottom: 5 }}>
       <Image className="point-circle" src="point.png" width="4" height="4" alt="point" border="0" />
       {rate.toUpperCase()}
     </p>
     {oldRate && (
-      <p
-        className={`point-rate my0 ${size}`}
-        style={{
-          color: '#ccc',
-          fontSize: 10,
-          display: 'inline',
-          marginLeft: 10,
-          textDecoration: 'line-through',
-        }}
-      >
-        {oldRate.toUpperCase()}
-      </p>
+      <p className={`point-rate${row ? '-row' : ''} old-rate`}>{oldRate.toUpperCase()}</p>
     )}
   </Fragment>
 )

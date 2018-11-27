@@ -135,3 +135,7 @@ a[x-apple-data-detectors] {
   margin-left: auto;
   margin-right: auto;
 }
+
+.inline {
+  display: inline;
+}

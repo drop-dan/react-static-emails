@@ -23,7 +23,7 @@ const Offer = ({
 
       {<h2 className="mt3 mb1">{brandData[brand].name}</h2>}
 
-      {pointRate && <PointRate rate={pointRate} oldRate={oldRate} size="small" />}
+      {pointRate && <PointRate rate={pointRate} oldRate={oldRate} className="small" />}
 
       {image && (
         <Image

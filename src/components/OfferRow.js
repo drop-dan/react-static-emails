@@ -1,8 +1,9 @@
 import React from 'react'
-import { Button, Logo, PointRateRow } from './'
+import { Button, Logo, PointRate } from './'
+import brandData from '../utils/brandData'
 
-const ItemRow = ({
-  logo, link, brand, button, pointRate, oldRate, divider,
+const OfferRow = ({
+  link, brand, button = 'Shop now', pointRate, oldRate, divider,
 }) => (
   <div
     className="mx-auto"
@@ -14,15 +15,15 @@ const ItemRow = ({
     }}
   >
     <div className="mt1" style={{ float: 'left' }}>
-      {logo && <Logo image={logo} brand="title" />}
+      {brand && <Logo brand={brand} />}
     </div>
 
     <div className="mt1" style={{ float: 'right', width: '55%', maxWidth: 300 }}>
-      {brand && <h3 className="mt0 mb1 left-align">{brand}</h3>}
+      {brand && <h3 className="mt0 mb1 left-align">{brandData[brand].name}</h3>}
 
-      {pointRate && <PointRateRow rate={pointRate} oldRate={oldRate} size="small" />}
+      {pointRate && <PointRate row rate={pointRate} oldRate={oldRate} className="small" />}
 
-      {button && (
+      {link && (
         <Button href={link} className="small mt1" style={{ maxWidth: 140 }}>
           {button}
         </Button>
@@ -33,4 +34,4 @@ const ItemRow = ({
   </div>
 )
 
-export default ItemRow
+export default OfferRow
