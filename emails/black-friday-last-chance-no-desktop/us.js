@@ -29,29 +29,23 @@ const BlackFridayEmail = () => (
       <h2 className="mb4">Our top picks</h2>
 
       <ItemRow
-        logo="logos/jet.png"
-        brandName="Jet"
+        brand="Jet"
         pointRate="80 PER $1"
         oldRate="40 PER $1"
-        button="Shop Now"
         link="https://b.ewd.io/BFLastJet"
       />
 
       <ItemRow
-        logo="logos/barkbox.png"
-        brandName="BarkBox"
+        brand="BarkBox"
         pointRate="40,000"
         oldRate="20,000 "
-        button="Shop Now"
         link="https://b.ewd.io/BFLastBarkBox"
       />
 
       <ItemRow
-        logo="logos/casper.png"
-        brandName="Casper"
+        brand="Casper"
         pointRate="100 PER $1"
         oldRate="75 PER $1"
-        button="Shop Now"
         link="https://b.ewd.io/BFLastCasperUS"
       />
     </div>

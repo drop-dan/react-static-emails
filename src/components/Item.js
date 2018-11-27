@@ -1,26 +1,27 @@
 import React, { Fragment } from 'react'
 import { Button, Image, Logo, PointRate } from './'
+import brandData from '../utils/brandData'
 
 const Item = ({
   image,
   imageWidth = '300',
   imageHeight = '300',
-  logo,
+  logo = true,
   link,
-  brandName,
+  brand,
   tagline,
   title,
   body,
-  button,
+  button = 'Shop now',
   pointRate,
   oldRate,
   divider = true,
 }) => (
   <Fragment>
     <div className="item-wrap mt1">
-      {logo && <Logo image={logo} className="mx-auto" brandName="title" />}
+      {logo && <Logo brand={brand} className="mx-auto" />}
 
-      {brandName && <h2 className="mt3 mb1">{brandName}</h2>}
+      {<h2 className="mt3 mb1">{brandData[brand].name}</h2>}
 
       {pointRate && <PointRate rate={pointRate} oldRate={oldRate} size="small" />}
 

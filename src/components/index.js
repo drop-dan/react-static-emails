@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { LogoBar } from './'
+import brandData from '../utils/brandData'
 
 export { default as Main } from './Main'
 export { default as Footer } from './Footer'
@@ -39,11 +40,17 @@ export const HeroImage = ({
   </Link>
 )
 
-export const Logo = ({ image, className, brandName = 'brand' }) => (
-  <div className={`logo ${className}`}>
-    <Image src={image} width="100" height="100" alt={brandName} border="0" />
-  </div>
-)
+export const Logo = ({ image, className, brand = 'brand' }) => {
+  const brandLogo = brandData[brand] && brandData[brand].logo
+  const src = image || brandLogo
+  return (
+    src && (
+      <div className={`logo ${className}`}>
+        <Image src={`logos/${src}`} width="100" height="100" alt={brand} border="0" />
+      </div>
+    )
+  )
+}
 
 export const PointRate = ({ rate, oldRate, size = 'normal' }) => (
   <Fragment>

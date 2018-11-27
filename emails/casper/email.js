@@ -1,8 +1,6 @@
 import React from 'react'
 import { Main, Header, HeroImage, OfferBlurb, Footer, Item } from '../../src/components'
 
-const Offer = props => <Item {...props} button="Shop now" />
-
 // Subject: Black Friday week starts TOMORROW! Your deals inside
 
 const CasperEmail = () => (
@@ -19,9 +17,8 @@ const CasperEmail = () => (
 
       <div className="divider" />
 
-      <Offer
-        logo="casper.png"
-        brandName="Casper"
+      <Item
+        brand="Casper"
         pointRate="25,000"
         image="mattress.jpg"
         imageWidth="600"

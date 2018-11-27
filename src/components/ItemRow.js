@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Logo, PointRateRow } from './'
 
 const ItemRow = ({
-  logo, link, brandName, button, pointRate, oldRate, divider,
+  logo, link, brand, button, pointRate, oldRate, divider,
 }) => (
   <div
     className="mx-auto"
@@ -14,11 +14,11 @@ const ItemRow = ({
     }}
   >
     <div className="mt1" style={{ float: 'left' }}>
-      {logo && <Logo image={logo} brandName="title" />}
+      {logo && <Logo image={logo} brand="title" />}
     </div>
 
     <div className="mt1" style={{ float: 'right', width: '55%', maxWidth: 300 }}>
-      {brandName && <h3 className="mt0 mb1 left-align">{brandName}</h3>}
+      {brand && <h3 className="mt0 mb1 left-align">{brand}</h3>}
 
       {pointRate && <PointRateRow rate={pointRate} oldRate={oldRate} size="small" />}
 

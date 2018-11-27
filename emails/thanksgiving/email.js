@@ -17,11 +17,10 @@ const ThanksGivingEmail = () => (
 
       <Item
         image="thanksgiving/thanksgiving-image.jpg"
-        logo="thanksgiving/draft-kings.png"
         tagline="NEW"
         title="Get Your $5 Free Play Credit"
         body="A side of football with your turkey. Sign up at DraftKings and earn 15,000 Drop points, plus a $5 free play credit, with a first deposit of $5 or more! Want more action? After you sign up, play in their free $10,000 fantasy football contest for Thursday night’s game between Atlanta and New Orleans!* "
-        brandName="Draft Kings"
+        brand="Draft Kings"
         pointRate="15,000"
         imageWidth="500"
         imageHeight="250"

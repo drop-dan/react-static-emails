@@ -1,0 +1,28 @@
+const brands = {
+  BarkBox: { name: 'BarkBox', logo: 'barkbox.png' },
+  Bloomingdales: { name: 'Bloomingdales', logo: 'bloomingdales.png' },
+  Casper: { name: 'Casper', logo: 'casper.png' },
+  'Charlotte Tilbury': { name: 'Charlotte Tilbury', logo: 'charlottetilbury.png' },
+  ClassPass: { name: 'ClassPass', logo: 'classpass.png' },
+  'Draft Kings': { name: 'Draft Kings', logo: 'draft-kings.png' },
+  Evernew: { name: 'Evernew', logo: 'evernew.png' },
+  FanXchange: { name: 'FanXchange', logo: 'fanxchange.png' },
+  'Forever 21': { name: 'Forever 21', logo: 'forever21.png' },
+  'Frank & Oak': { name: 'Frank & Oak', logo: 'frankandoak.png' },
+  Gap: { name: 'Gap', logo: 'gap.png' },
+  Hayneedle: { name: 'Hayneedle', logo: 'hayneedle.png' },
+  'Hello Fresh': { name: 'HelloFresh', logo: 'hellofresh.png' },
+  Indigo: { name: 'Indigo', logo: 'indigo.png' },
+  'Jet.com': { name: 'Jet&#8203;.com', logo: 'jet.png' },
+  Kobo: { name: 'Kobo', logo: 'kobo_us.png' },
+  Lululemon: { name: 'Lululemon', logo: 'lululemon.png' },
+  "Macy's": { name: "Macy's", logo: 'macys.png' },
+  'New Balance': { name: 'New Balance', logo: 'newbalance.png' },
+  QVC: { name: 'QVC', logo: 'qvc.png' },
+  Sephora: { name: 'Sephora', logo: 'sephora.png' },
+  "S'well": { name: "S'well", logo: 'swell.png' },
+  Tatcha: { name: 'Tatcha', logo: 'tatcha.png' },
+  'Warby Parker': { name: 'Warby Parker', logo: 'warby.png' },
+}
+
+export default brands
