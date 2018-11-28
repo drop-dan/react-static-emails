@@ -1,30 +1,49 @@
 import React from 'react'
-import { Button, Logo, PointRate } from './'
+import { Button, Logo, PointRate, Image } from './'
 import brandData from '../utils/brandData'
 
 const OfferRow = ({
-  link, brand, button = 'Shop now', pointRate, oldRate, divider,
+  link,
+  brand,
+  button = 'Shop now',
+  pointRate,
+  oldRate,
+  divider,
+  body,
+  logo = true,
+  maxWidth = 300,
+  buttonMaxWidth = 140,
+  invert = false,
+  image,
 }) => (
   <div
     className="mx-auto"
     style={{
-      height: 200,
-      width: '90%',
-      maxWidth: 330,
-      minWidth: 280,
+      width: '100%',
+      overflow: 'hidden',
+      boxSizing: 'border-box',
+      paddingLeft: invert ? '20px' : '',
+      paddingRight: invert ? '' : '20px',
     }}
   >
-    <div className="mt1" style={{ float: 'left' }}>
-      {brand && <Logo brand={brand} />}
+    <div style={{ float: invert ? 'right' : 'left', width: '40%' }}>
+      {logo && brand && <Logo brand={brand} />}
+      {image && image}
     </div>
 
-    <div className="mt1" style={{ float: 'right', width: '55%', maxWidth: 300 }}>
+    <div className="mt1" style={{ float: invert ? 'left' : 'right', width: '60%', maxWidth }}>
       {brand && <h3 className="mt0 mb1 left-align">{brandData[brand].name}</h3>}
 
-      {pointRate && <PointRate row rate={pointRate} oldRate={oldRate} className="small" />}
+      {pointRate && (
+        <div className="left-align mt1 mb1">
+          <PointRate row rate={pointRate} oldRate={oldRate} className="small" />
+        </div>
+      )}
+
+      {body && body}
 
       {link && (
-        <Button href={link} className="small mt1" style={{ maxWidth: 140 }}>
+        <Button href={link} className="small mt1" style={{ maxWidth: buttonMaxWidth }}>
           {button}
         </Button>
       )}

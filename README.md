@@ -4,6 +4,9 @@ Add compression and resizing to images
 Add git automation scripts
 rename component props for marketing needs
 remove react static and replace with webpack
+add more component abstraction
+make browser open when running start
+remove DS_store from upload script
 
 SETUP:
 install vscode
