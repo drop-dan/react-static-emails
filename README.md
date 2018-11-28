@@ -1,12 +1,12 @@
 TODO:
-Add proptypes to components
-Add compression and resizing to images
-Add git automation scripts
-rename component props for marketing needs
-remove react static and replace with webpack
-add more component abstraction
 make browser open when running start
+add more component abstraction
+rename component props for marketing needs
+Add proptypes to components
+Add git automation scripts
 remove DS_store from upload script
+Add compression and resizing to images
+remove react static and replace with webpack
 
 SETUP:
 install vscode
