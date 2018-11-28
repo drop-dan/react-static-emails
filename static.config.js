@@ -1,5 +1,6 @@
 import React from 'react'
 import inlineCss from 'inline-css'
+import OpenBrowserPlugin from 'open-browser-webpack-plugin'
 import cleanDistFolder from './src/utils/cleanDistFolder'
 import DocumentComponent from './src/components/Document'
 
@@ -19,6 +20,11 @@ export default {
     dist: `emails/${email}/html`,
     devDist: 'tmp/dev-server',
     public: 'public',
+  },
+
+  webpack: config => {
+    config.plugins.push(new OpenBrowserPlugin({ url: 'http://localhost:3000' }))
+    return config
   },
 
   getSiteData: () => ({ email, filename, title: email }),

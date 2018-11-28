@@ -20,6 +20,7 @@
   "devDependencies": {
     "aws-sdk": "^2.361.0",
     "eslint-config-react-tools": "1.x.x",
+    "open-browser-webpack-plugin": "0.0.5",
     "serve": "^6.1.0"
   }
 }
