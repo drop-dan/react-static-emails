@@ -1,5 +1,4 @@
 TODO:
-make browser open when running start
 add more component abstraction
 rename component props for marketing needs
 Add proptypes to components
