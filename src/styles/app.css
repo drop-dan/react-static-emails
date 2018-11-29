@@ -139,3 +139,18 @@ a[x-apple-data-detectors] {
 .inline {
   display: inline;
 }
+
+.brand-image {
+  max-width: 90%;
+  height: auto;
+  margin: 35px auto 0;
+  display: block;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.rounded {
+  border-radius: 12px;
+}

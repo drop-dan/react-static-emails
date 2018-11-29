@@ -7,6 +7,7 @@ export { default as Offer } from './Offer'
 export { default as OfferRow } from './OfferRow'
 export { default as LogoBar } from './LogoBar'
 export { default as DefaultTemplate } from '../templates/default'
+export { default as OfferRowTemplate } from '../templates/offer-row'
 
 export const Header = () => <LogoBar />
 
@@ -25,7 +26,7 @@ export const Button = ({
 )
 
 export const Image = ({ src, alt = '', ...props }) => (
-  <img src={`https://s3.amazonaws.com/drop-web-font/${src}`} alt={alt} {...props} />
+  <img src={`https://s3.amazonaws.com/drop-web-font/${src}`} alt={alt} border="0" {...props} />
 )
 
 export const HeroImage = ({
