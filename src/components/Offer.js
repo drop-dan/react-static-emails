@@ -6,7 +6,7 @@ const Offer = ({
   image,
   imageWidth = '300',
   imageHeight = '300',
-  logo = true,
+  logo,
   link,
   brand,
   tagline,
@@ -16,60 +16,63 @@ const Offer = ({
   pointRate,
   oldRate,
   divider = true,
-}) => (
-  <Fragment>
-    <div className="item-wrap mt1">
-      {logo && <Logo brand={brand} className="mx-auto" />}
+}) => {
+  const brandLogo = brandData[brand] && brandData[brand].logo
+  return (
+    <Fragment>
+      <div className="item-wrap mt1">
+        <Logo image={logo || brandLogo} className="mx-auto" />
 
-      {<h2 className="mt3 mb1">{brandData[brand].name}</h2>}
+        {<h2 className="mt3 mb1">{brandData[brand] ? brandData[brand].name : brand}</h2>}
 
-      {pointRate && <PointRate rate={pointRate} oldRate={oldRate} className="small" />}
+        {pointRate && <PointRate rate={pointRate} oldRate={oldRate} className="small" />}
 
-      {image && (
-        <Image
-          src={image}
-          width={imageWidth}
-          height={imageHeight}
-          alt="Fluid images"
-          border="0"
-          className="item mx-auto"
-        />
-      )}
+        {image && (
+          <Image
+            src={image}
+            width={imageWidth}
+            height={imageHeight}
+            alt="Fluid images"
+            border="0"
+            className="item mx-auto"
+          />
+        )}
 
-      {tagline && (
-        <p className="tagline m0" align="center" bgcolor="#F5F7FA">
-          {tagline.toUpperCase()}
-        </p>
-      )}
-
-      {title && (
-        <h3 className="mt2 mb3" align="center" bgcolor="#F5F7FA">
-          {title}
-        </h3>
-      )}
-
-      {body.match(/<br>/) &&
-        body.split('<br>').map((item, i, arr) => (
-          <p className={`mt0 ${i === arr.length - 1 ? 'mb3' : 'mb2'}`} key={i}>
-            {item}
+        {tagline && (
+          <p className="tagline m0" align="center" bgcolor="#F5F7FA">
+            {tagline.toUpperCase()}
           </p>
-        ))}
+        )}
 
-      {!body.match(/<br>/) && (
-        <p className="mt0 mb2" align="center" bgcolor="#F5F7FA">
-          {body}
-        </p>
-      )}
+        {title && (
+          <h3 className="mt2 mb3" align="center" bgcolor="#F5F7FA">
+            {title}
+          </h3>
+        )}
 
-      {button && (
-        <Button href={link} className="wide mt2 mb2 mx-auto">
-          {button}
-        </Button>
-      )}
-    </div>
+        {body.match(/<br>/) &&
+          body.split('<br>').map((item, i, arr) => (
+            <p className={`mt0 ${i === arr.length - 1 ? 'mb3' : 'mb2'}`} key={i}>
+              {item}
+            </p>
+          ))}
 
-    {divider && <div className="divider" />}
-  </Fragment>
-)
+        {!body.match(/<br>/) && (
+          <p className="mt0 mb2" align="center" bgcolor="#F5F7FA">
+            {body}
+          </p>
+        )}
+
+        {button && (
+          <Button href={link} className="wide mt2 mb2 mx-auto">
+            {button}
+          </Button>
+        )}
+      </div>
+
+      {divider && <div className="divider" />}
+    </Fragment>
+  )
+}
 
 export default Offer

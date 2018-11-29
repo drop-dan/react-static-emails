@@ -57,7 +57,7 @@ const CyberMondayEmail = () => (
       />
 
       <Offer
-        brand="Frank And Oak"
+        brand="Frank & Oak"
         pointRate="60 PER $1"
         oldRate="50 PER $1"
         body="Look great without the fuss. Score 30% off site-wide, with select items up to 50% off using code CYBERMONDAY30."

@@ -41,14 +41,13 @@ export const HeroImage = ({
 )
 
 export const Logo = ({ image, className, brand = 'brand' }) => {
-  const brandLogo = brandData[brand] && brandData[brand].logo
-  const src = image || brandLogo
+  if (!image) {
+    return null
+  }
   return (
-    src && (
-      <div className={`logo ${className}`}>
-        <Image src={`logos/${src}`} width="100" height="100" alt={brand} border="0" />
-      </div>
-    )
+    <div className={`logo ${className}`}>
+      <Image src={`logos/${image}`} width="100" height="100" alt={brand} border="0" />
+    </div>
   )
 }
 

@@ -41,7 +41,7 @@ const CyberMondayEmail = () => (
       />
 
       <Offer
-        brand="Jet.&#8203;com"
+        brand="Jet"
         pointRate="80 PER $1"
         oldRate="40 PER $1"
         body="Today only, save up to $250 on select Mac devices, nab up to 20% off Samsung TVs, and score up to 25% off select PS4 favorites like Call of Duty 4."
@@ -72,7 +72,7 @@ const CyberMondayEmail = () => (
       />
 
       <Offer
-        brand="Frank And Oak"
+        brand="Frank & Oak"
         pointRate="60 PER $1"
         oldRate="50 PER $1"
         body="Look great without the fuss. Score 30% off site-wide, with select items up to 50% off using code CYBERMONDAY30."
