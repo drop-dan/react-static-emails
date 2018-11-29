@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react'
 import { LogoBar } from './'
-import brandData from '../utils/brandData'
 
 export { default as Main } from './Main'
 export { default as Footer } from './Footer'
 export { default as Offer } from './Offer'
 export { default as OfferRow } from './OfferRow'
 export { default as LogoBar } from './LogoBar'
+export { default as DefaultTemplate } from '../templates/default'
 
 export const Header = () => <LogoBar />
 

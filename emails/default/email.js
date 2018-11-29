@@ -1,21 +1,13 @@
 import React from 'react'
-import { Main, Header, HeroImage, OfferBlurb, Footer } from '../../src/components'
+import { DefaultTemplate } from '../../src/components'
 
 const DefaultEmail = () => (
-  <Main preheaderText="This is a test email">
-    <Header />
-
-    <HeroImage image="default.png" />
-
-    <div className="p2 mx-auto" style={{ maxWidth: 480 }}>
-      <OfferBlurb
-        title="Nothing to see here"
-        body="You entered an email name that doesn't exist. Or maybe I broke something ¯\_(ツ)_/¯"
-      />
-    </div>
-
-    <Footer />
-  </Main>
+  <DefaultTemplate
+    preheaderText="This is a test email"
+    hero="default.png"
+    title="Nothing to see here"
+    body="You entered an email name that doesn't exist. Or maybe I broke something ¯\_(ツ)_/¯"
+  />
 )
 
 export default DefaultEmail
