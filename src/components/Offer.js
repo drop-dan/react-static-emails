@@ -50,9 +50,7 @@ const Offer = ({
           </h3>
         )}
 
-        {body &&
-          body.match(/<br>/) &&
-          body.split('<br>').map((item, i, arr) => <p key={i}>{item}</p>)}
+        {body && body.match(/<br>/) && body.split('<br>').map((item, i) => <p key={i}>{item}</p>)}
 
         {!body ||
           (!body.match(/<br>/) && (

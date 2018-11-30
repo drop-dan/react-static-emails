@@ -1,14 +1,5 @@
 import React from 'react'
-import {
-  Main,
-  Header,
-  HeroImage,
-  OfferBlurb,
-  Footer,
-  Offer,
-  Button,
-  DefaultTemplate,
-} from '../../src/components'
+import { Offer, Button, DefaultTemplate } from '../../src/components'
 
 const CyberMondayEmail = () => (
   <DefaultTemplate
