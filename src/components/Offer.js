@@ -50,18 +50,20 @@ const Offer = ({
           </h3>
         )}
 
-        {body.match(/<br>/) &&
+        {body &&
+          body.match(/<br>/) &&
           body.split('<br>').map((item, i, arr) => (
             <p className={`mt0 ${i === arr.length - 1 ? 'mb3' : 'mb2'}`} key={i}>
               {item}
             </p>
           ))}
 
-        {!body.match(/<br>/) && (
-          <p className="mt0 mb2" align="center" bgcolor="#F5F7FA">
-            {body}
-          </p>
-        )}
+        {!body ||
+          (!body.match(/<br>/) && (
+            <p className="mt0 mb2" align="center" bgcolor="#F5F7FA">
+              {body}
+            </p>
+          ))}
 
         {button && (
           <Button href={link} className="wide mt2 mb2 mx-auto">
