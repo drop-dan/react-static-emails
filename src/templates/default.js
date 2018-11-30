@@ -16,10 +16,10 @@ const DefaultTemplate = ({
 
     {hero && <HeroImage href={heroLink} image={hero} />}
 
-    <div className="p2 mx-auto" style={{ maxWidth: 480 }}>
-      {title && <h1 className="mt4 mb0">{title}</h1>}
+    <div className="py4 px2 mx-auto" style={{ maxWidth: 480 }}>
+      {title && <h1>{title}</h1>}
 
-      {typeof body === 'string' ? <p className="my1 large">{body}</p> : body}
+      {typeof body === 'string' ? <p className="large">{body}</p> : body}
 
       {button}
 

@@ -7,11 +7,7 @@ const JetHer = () => (
     hero="jet/her.gif"
     title="And this is just our highlight reel."
     body="Shop 1000s of items from Jet - on sale for a hot minute (Cyber Week ends Sunday!)."
-    button={
-      <Button className="mt2 mx-auto" href="https://b.ewd.io/CWJetForHer" style={{ maxWidth: 300 }}>
-        Shop all
-      </Button>
-    }
+    button={<Button href="https://b.ewd.io/CWJetForHer">Shop all</Button>}
   >
     <Offer
       brand="Jet"
@@ -33,9 +29,7 @@ const JetHer = () => (
       Stock up on gifts for you and the women in your life with free shipping on orders over $35.
     </p>
 
-    <div className="p2 mx-auto mb4" style={{ maxWidth: 300 }}>
-      <Button href="https://b.ewd.io/CWJetForHer">Shop all</Button>
-    </div>
+    <Button href="https://b.ewd.io/CWJetForHer">Shop all</Button>
   </DefaultTemplate>
 )
 

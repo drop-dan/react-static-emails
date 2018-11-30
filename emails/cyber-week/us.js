@@ -22,11 +22,7 @@ const CyberWeek = () => (
     hero="cyber-week/header.gif"
     title="December's coming in hot."
     body="But we got you covered. There's still time to grab gifts for everyone on your 🎄list with these Cyber Week deals."
-    button={
-      <Button href="https://b.ewd.io/CWUS" className="mx-auto mt3" style={{ maxWidth: 300 }}>
-        Shop Now
-      </Button>
-    }
+    button={<Button href="https://b.ewd.io/CWUS">Shop Now</Button>}
   >
     <Offer
       brand="Gap"
@@ -82,12 +78,7 @@ const CyberWeek = () => (
         width="600"
         height="300"
         src="cyber-week/newbalance.jpg"
-        style={{
-          width: '100%',
-          marginTop: 10,
-          marginBottom: 20,
-          borderRadius: 12,
-        }}
+        className="width-100 rounded"
       />
 
       <p>
@@ -95,9 +86,7 @@ const CyberWeek = () => (
         of kicks that look good - and feel good, too. Hurry, contest ends Saturday morning!{' '}
       </p>
 
-      <Button href="https://b.ewd.io/CWContest" style={{ maxWidth: 300, margin: '30px auto' }}>
-        Enter now
-      </Button>
+      <Button href="https://b.ewd.io/CWContest">Enter now</Button>
     </div>
   </OfferRowTemplate>
 )

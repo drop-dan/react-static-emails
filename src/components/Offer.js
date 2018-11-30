@@ -20,10 +20,10 @@ const Offer = ({
   const brandLogo = brandData[brand] && brandData[brand].logo
   return (
     <Fragment>
-      <div className="item-wrap mt1">
+      <div className="item-wrap">
         <Logo image={logo || brandLogo} className="mx-auto" />
 
-        {<h2 className="mt3 mb1">{brandData[brand] ? brandData[brand].name : brand}</h2>}
+        {<h2>{brandData[brand] ? brandData[brand].name : brand}</h2>}
 
         {pointRate && <PointRate rate={pointRate} oldRate={oldRate} className="small" />}
 
@@ -39,34 +39,30 @@ const Offer = ({
         )}
 
         {tagline && (
-          <p className="tagline m0" align="center" bgcolor="#F5F7FA">
+          <p className="tagline" align="center" bgcolor="#F5F7FA">
             {tagline.toUpperCase()}
           </p>
         )}
 
         {title && (
-          <h3 className="mt2 mb3" align="center" bgcolor="#F5F7FA">
+          <h3 align="center" bgcolor="#F5F7FA">
             {title}
           </h3>
         )}
 
         {body &&
           body.match(/<br>/) &&
-          body.split('<br>').map((item, i, arr) => (
-            <p className={`mt0 ${i === arr.length - 1 ? 'mb3' : 'mb2'}`} key={i}>
-              {item}
-            </p>
-          ))}
+          body.split('<br>').map((item, i, arr) => <p key={i}>{item}</p>)}
 
         {!body ||
           (!body.match(/<br>/) && (
-            <p className="mt0 mb2" align="center" bgcolor="#F5F7FA">
+            <p align="center" bgcolor="#F5F7FA">
               {body}
             </p>
           ))}
 
         {button && (
-          <Button href={link} className="wide mt2 mb2 mx-auto">
+          <Button href={link} className="wide">
             {button}
           </Button>
         )}

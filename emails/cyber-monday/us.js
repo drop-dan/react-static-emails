@@ -17,15 +17,7 @@ const CyberMondayEmail = () => (
     hero="cyber-monday/header.gif"
     title="It's Cy-burr Monday. Stay home."
     body="Today only, shop through Drop and get up to 30% back in points, just like that."
-    button={
-      <Button
-        href="https://b.ewd.io/CyberMondayUS"
-        className="wide mt2 mb2 mx-auto"
-        style={{ marginTop: 20 }}
-      >
-        Shop now
-      </Button>
-    }
+    button={<Button href="https://b.ewd.io/CyberMondayUS">Shop now</Button>}
   >
     <Offer
       brand="ClassPass"

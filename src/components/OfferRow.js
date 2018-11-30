@@ -12,7 +12,6 @@ const OfferRow = ({
   body,
   logo,
   maxWidth = 450,
-  buttonMaxWidth = 400,
   invert = false,
   note,
   image,
@@ -34,11 +33,11 @@ const OfferRow = ({
           {image || <Logo image={logo || brandLogo} className="mx-auto" />}
         </div>
 
-        <div className="mt1" style={{ float: invert ? 'left' : 'right', width: '60%', maxWidth }}>
-          {brand && <h3 className="mt0 mb1 left-align">{brandData[brand].name}</h3>}
+        <div style={{ float: invert ? 'left' : 'right', width: '60%', maxWidth }}>
+          {brand && <h3 className="left-align">{brandData[brand].name}</h3>}
 
           {pointRate && (
-            <div className="left-align mt1 mb1">
+            <div className="left-align">
               <PointRate row rate={pointRate} oldRate={oldRate} className="small" />
             </div>
           )}
@@ -46,13 +45,13 @@ const OfferRow = ({
           {body && body}
 
           {link && (
-            <Button href={link} className="small mt1" style={{ maxWidth: buttonMaxWidth }}>
+            <Button href={link} className="small">
               {button}
             </Button>
           )}
         </div>
       </div>
-      {note && <p className="mt4 small">{note}</p>}
+      {note && <p className="small">{note}</p>}
       {divider && <div className="divider" />}
     </Fragment>
   )

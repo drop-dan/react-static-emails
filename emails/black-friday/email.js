@@ -45,8 +45,6 @@ const BlackFridayEmail = () => (
       brand="Warby Parker"
       body="Expect better specs. Shop Warby Parker and get 30% back in points."
       link="https://b.ewd.io/BFLWarbyCA"
-      pointRate="300 PER $1"
-      oldRate="was 200 per $1"
     />
 
     <Offer
@@ -72,9 +70,7 @@ const BlackFridayEmail = () => (
       Ulta, Kobo, and more - only with Drop.
     </p>
 
-    <Button href="https://b.ewd.io/BlackFridayCA" className="wide mt3 mb2 mx-auto">
-      Shop now
-    </Button>
+    <Button href="https://b.ewd.io/BlackFridayCA">Shop now</Button>
   </DefaultTemplate>
 )
 

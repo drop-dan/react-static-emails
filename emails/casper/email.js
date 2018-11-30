@@ -1,5 +1,5 @@
 import React from 'react'
-import { Offer, DefaultTemplate } from '../../src/components'
+import { Offer, DefaultTemplate, Button } from '../../src/components'
 
 const CasperEmail = () => (
   <DefaultTemplate
@@ -7,6 +7,7 @@ const CasperEmail = () => (
     hero="casper/casper-header.jpg"
     title="10% Off, 10% Back"
     body="This Black Friday, Enjoy 10% off your next mattress order.  Plus, get 10% back in points."
+    button={<Button>test</Button>}
   >
     <Offer
       brand="Casper"

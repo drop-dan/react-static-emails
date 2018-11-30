@@ -8,33 +8,23 @@ const BlackFridayEmail = () => (
     hero="black-friday-last-chance/header.gif"
     title="Hurry, promotions end tonight ⏳"
     body="Sunday Funday, elevated. It's your last day to do some serious shopping damage. Score the best deals on your favorite brands - only with Drop. Shop our picks below via desktop, tablet, or mobile - all from the comfort of your couch."
-    button={
-      <Button
-        href="https://b.ewd.io/BFLastChance"
-        className="mx-auto mt3"
-        style={{ maxWidth: 300 }}
-      >
-        Shop Black Friday
-      </Button>
-    }
+    button={<Button href="https://b.ewd.io/BFLastChance">Shop Black Friday</Button>}
     footer={
       <div>
-        <h2 className="mb0">Boosted offers</h2>
+        <h2>Boosted offers</h2>
 
         <Image
           href="https://b.ewd.io/BFLastChance2"
+          className="width-100"
           width="600"
           src="black-friday-last-chance-no-desktop/us_image.png"
-          style={{ width: '100%', maxWidth: 600 }}
         />
 
-        <div className="p2 mx-auto mb4" style={{ maxWidth: 300 }}>
-          <Button href="https://b.ewd.io/BFLastChance">Shop all</Button>
-        </div>
+        <Button href="https://b.ewd.io/BFLastChance">Shop all</Button>
       </div>
     }
   >
-    <h2 className="mb4">Our top picks</h2>
+    <h2>Our top picks</h2>
 
     <OfferRow
       brand="Jet"

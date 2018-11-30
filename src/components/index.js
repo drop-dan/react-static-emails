@@ -36,7 +36,7 @@ export const HeroImage = ({
   image,
   alt,
 }) => (
-  <Link href={href}>
+  <Link className="block" href={href}>
     <Image className="hero-image" src={image} width={width} height={height} border="0" alt={alt} />
   </Link>
 )
@@ -56,7 +56,7 @@ export const PointRate = ({
   rate, oldRate, row, className = 'normal',
 }) => (
   <Fragment>
-    <p className={`point-rate${row ? '-row' : ''} ${className}`} style={{ marginBottom: 5 }}>
+    <p className={`point-rate${row ? '-row' : ''} ${className}`}>
       <Image className="point-circle" src="point.png" width="4" height="4" alt="point" border="0" />
       {rate.toUpperCase()}
     </p>

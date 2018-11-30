@@ -7,7 +7,7 @@ const ReferralUpsell = () => (
     hero="referral-upsell/header.png"
     title="This #GivingTuesday, give the gift of caffeine."
     body={
-      <p className="my2 mb4 large">
+      <p className="large">
         For a limited time only, refer a friend to Drop and you'll both get{' '}
         <b style={{ color: '#585858' }}>$5 in Drop points</b> to treat yourselves.
       </p>

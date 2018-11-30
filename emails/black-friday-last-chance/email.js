@@ -11,10 +11,10 @@ const BlackFridayEmail = () => (
     footer={
       <Image
         href="https://b.ewd.io/BFLastChance2"
+        className="width-100"
         width="600"
         height="300"
         src="black-friday-last-chance/footer.jpg"
-        style={{ width: '100%', maxWidth: 600 }}
       />
     }
   >

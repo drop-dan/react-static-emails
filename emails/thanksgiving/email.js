@@ -9,7 +9,7 @@ const ThanksGivingEmail = () => (
     body="This Thanksgiving, cozy up on the couch. It's time to give thanks for friends, family - and football."
     footer={
       <div>
-        <p className="mx-auto" style={{ maxWidth: 480, marginBottom: 60 }}>
+        <p className="mx-auto">
           Looking for Black Friday deals? Take $10 off your first order at QVC, get 15% off + free
           shipping at New Balance, score 10% off Jet.com's hot holiday picks - and many, many more -
           only with Drop.
@@ -17,7 +17,7 @@ const ThanksGivingEmail = () => (
 
         <HeroImage image="thanksgiving/thanksgiving-footer.png" />
 
-        <p className="small mx2 my4">
+        <p className="small">
           *Minimum $5 deposit. Eligibility restrictions apply. See website for details.
         </p>
       </div>

@@ -1,0 +1,59 @@
+.button {
+  box-sizing: border-box;
+  height: 60px;
+  background-color: #2bd686;
+  display: block;
+  text-align: center;
+  border: 0;
+  outline: 0;
+  border-radius: 100px;
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 40px auto;
+  max-width: 300px;
+}
+
+.button a {
+  font-family: Helvetica, sans-serif;
+  padding: 25px 30px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 60px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.button.light {
+  background-color: rgb(244, 253, 249);
+}
+
+.button.light a {
+  color: rgb(43, 214, 134);
+}
+
+.button.wide {
+  max-width: 280px;
+}
+
+.button.wide a {
+  padding: 25px 65px;
+  letter-spacing: 1.9px;
+}
+
+.button.small {
+  height: 40px;
+}
+
+.button.small a {
+  padding: 10px 20px;
+  font-size: 11px;
+  line-height: 40px;
+}

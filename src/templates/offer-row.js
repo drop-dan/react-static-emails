@@ -13,7 +13,7 @@ const OfferRowTemplate = ({
 }) => (
   <DefaultTemplate preheaderText={preheaderText} hero={hero} heroLink={heroLink} {...props}>
     <div className="px2">
-      <h2 className="mt4 mb0">
+      <h2>
         <b>{title}</b>
       </h2>
 

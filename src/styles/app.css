@@ -6,16 +6,6 @@ body {
   background-color: #efefef;
 }
 
-img {
-  border: 0;
-  height: auto;
-  line-height: 100%;
-  outline: none;
-  text-decoration: none;
-  -ms-interpolation-mode: bicubic;
-}
-
-/* iOS BLUE LINKS */
 a[x-apple-data-detectors] {
   color: inherit !important;
   text-decoration: none !important;
@@ -23,6 +13,16 @@ a[x-apple-data-detectors] {
   font-family: inherit !important;
   font-weight: inherit !important;
   line-height: inherit !important;
+}
+
+img {
+  border: 0;
+  height: auto;
+  line-height: 100%;
+  outline: none;
+  text-decoration: none;
+  -ms-interpolation-mode: bicubic;
+  max-width: 600px;
 }
 
 .preheader-text {
@@ -37,73 +37,15 @@ a[x-apple-data-detectors] {
   overflow: hidden;
 }
 
-.logo-bar {
-  padding: 30px 26px;
-  height: 60px;
-}
-
 .main {
   background-color: white;
   max-width: 600px;
   margin: 0 auto;
 }
 
-.button {
-  box-sizing: border-box;
+.logo-bar {
+  padding: 30px 26px;
   height: 60px;
-  background-color: #2bd686;
-  display: block;
-  text-align: center;
-  border: 0;
-  outline: 0;
-  border-radius: 100px;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.button a {
-  font-family: Helvetica, sans-serif;
-  padding: 25px 30px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 60px;
-  letter-spacing: 1.5px;
-  text-align: center;
-  text-decoration: none;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.button.light {
-  background-color: rgb(244, 253, 249);
-}
-
-.button.light a {
-  color: rgb(43, 214, 134);
-}
-
-.button.wide {
-  max-width: 280px;
-}
-
-.button.wide a {
-  padding: 25px 65px;
-  letter-spacing: 1.9px;
-}
-
-.button.small {
-  height: 40px;
-}
-
-.button.small a {
-  padding: 10px 20px;
-  font-size: 11px;
-  line-height: 40px;
 }
 
 .logo-bar .drop-logo {
@@ -134,23 +76,4 @@ a[x-apple-data-detectors] {
   margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.inline {
-  display: inline;
-}
-
-.brand-image {
-  max-width: 90%;
-  height: auto;
-  margin: 35px auto 0;
-  display: block;
-}
-
-.width-100 {
-  width: 100%;
-}
-
-.rounded {
-  border-radius: 12px;
 }
