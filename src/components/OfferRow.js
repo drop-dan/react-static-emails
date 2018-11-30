@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Button, Logo, PointRate, Image } from './'
+import { Button, Logo, PointRate } from './'
 import brandData from '../utils/brandData'
 
 const OfferRow = ({
@@ -10,7 +10,7 @@ const OfferRow = ({
   oldRate,
   divider = true,
   body,
-  logo = true,
+  logo,
   maxWidth = 450,
   buttonMaxWidth = 400,
   invert = false,
