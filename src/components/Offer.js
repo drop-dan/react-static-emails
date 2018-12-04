@@ -23,7 +23,7 @@ const Offer = ({
       <div className="item-wrap">
         <Logo image={logo || brandLogo} className="mx-auto" />
 
-        {<h2>{brandData[brand] ? brandData[brand].name : brand}</h2>}
+        <h2>{brandData[brand] ? brandData[brand].name : brand}</h2>
 
         {pointRate && <PointRate rate={pointRate} oldRate={oldRate} className="small" />}
 

@@ -34,7 +34,7 @@ const OfferRow = ({
         </div>
 
         <div style={{ float: invert ? 'left' : 'right', width: '60%', maxWidth }}>
-          {brand && <h3 className="left-align">{brandData[brand].name}</h3>}
+          <h3 className="left-align">{brandData[brand] ? brandData[brand].name : brand}</h3>
 
           {pointRate && (
             <div className="left-align">
