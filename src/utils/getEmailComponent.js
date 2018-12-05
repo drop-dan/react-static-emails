@@ -20,7 +20,6 @@ const getEmailComponent = () => {
   const emails = {}
   const context = require.context('../../emails', true, /\.js$/)
   context.keys().forEach(key => {
-    console.log(key.replace('./', '').replace(`/${filename}.js`, ''))
     emails[key.replace('./', '').replace(`/${filename}.js`, '')] = context(key).default
   })
 

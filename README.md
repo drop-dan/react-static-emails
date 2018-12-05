@@ -1,16 +1,20 @@
 TODO:
-add more component abstraction
-rename component props for marketing needs
 Add proptypes to components
 Add git automation scripts
-remove DS_store from upload script
-Add compression and resizing to images
+rename component props for marketing needs
+add more component abstraction
 remove react static and replace with webpack
+
+DONE:
+Add compression and resizing to images
+remove DS_store from upload script
 
 SETUP:
 install vscode
 install node and npm
 install git
+install homebrew
+brew install graphicsmagick
 clone repo
 npm install
 add .env with s3 secrets

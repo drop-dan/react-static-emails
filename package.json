@@ -11,6 +11,12 @@
   },
   "dependencies": {
     "dotenv": "^6.1.0",
+    "gm": "^1.23.1",
+    "imagemin": "^6.0.0",
+    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-gm": "^2.0.1",
+    "imagemin-jpegoptim": "^6.0.0",
+    "imagemin-optipng": "^6.0.0",
     "inline-css": "^2.4.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
