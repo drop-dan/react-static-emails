@@ -25,7 +25,7 @@ const assetsPath = path.resolve(__dirname, assetsPathString)
 const uploadAssets = async () => {
   await imagemin([`${assetsPath}/*.gif`], `${assetsPath}/`, {
     plugins: [
-      resize({ width: 600, options: '>' }),
+      // resize({ width: 600, options: '>' }),
       gifsicle({ optimizationLevel: 3, interlaced: true, colors: 256 }),
     ],
   })

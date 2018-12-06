@@ -12,8 +12,9 @@ remove DS_store from upload script
 SETUP:
 install vscode
 install node and npm
+
 install git
-install homebrew
+install homebrew (https://brew.sh/)
 brew install graphicsmagick
 clone repo
 npm install
