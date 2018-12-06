@@ -8,6 +8,8 @@ const { walk, resize, uploadImageFromFile } = require('./uploadUtils')
 const AWS = require('aws-sdk')
 const s3 = new AWS.S3()
 
+require('dotenv').load()
+
 const accessKeyId = process.env.ACCESS_KEY_ID
 const secretAccessKey = process.env.SECRET_ACCESS_KEY
 
@@ -15,8 +17,6 @@ AWS.config.update({
   accessKeyId,
   secretAccessKey,
 })
-
-require('dotenv').load()
 
 const email = process.argv[2]
 const assetsPathString = `../../emails/${email}/assets`
@@ -30,7 +30,7 @@ const uploadAssets = async () => {
     ],
   })
 
-  console.log('Minified gifs')
+  console.log(process.env)
 
   imagemin([`${assetsPath}/*.{jpg,png}`], `${assetsPath}/`, {
     plugins: [
@@ -58,7 +58,7 @@ const uploadAssets = async () => {
         Key: `${email}/${fileName}`,
         Body: Buffer.from(data, 'binary'),
       },
-      () => console.log('Successfully uploaded', `${email}/${fileName}`)
+      (...args) => console.log(args)
     )
   }))
 }
