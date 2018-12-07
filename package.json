@@ -6,7 +6,10 @@
   "scripts": {
     "start": "react-static start",
     "build": "react-static build",
-    "upload": "node ./src/utils/uploadAssets"
+    "upload": "node ./src/utils/uploadAssets",
+    "save": "git add -A; git commit -m \"Adds new email\"; git pull",
+    "update": "git add -A; git commit -m wip; git pull; git reset head~",
+    "reset": "git fetch; git reset origin/master --hard;"
   },
   "dependencies": {
     "dotenv": "^6.1.0",
