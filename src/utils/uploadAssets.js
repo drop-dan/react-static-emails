@@ -6,33 +6,29 @@ const jpegoptim = require('imagemin-jpegoptim')
 const gifsicle = require('imagemin-gifsicle')
 const { walk, resize, uploadImageFromFile } = require('./uploadUtils')
 const AWS = require('aws-sdk')
-const s3 = new AWS.S3()
 
 require('dotenv').load()
 
-const accessKeyId = process.env.ACCESS_KEY_ID
-const secretAccessKey = process.env.SECRET_ACCESS_KEY
-
 AWS.config.update({
-  accessKeyId,
-  secretAccessKey,
+  accessKeyId: process.env.ACCESS_KEY_ID,
+  secretAccessKey: process.env.SECRET_ACCESS_KEY,
 })
+const s3 = new AWS.S3()
 
 const email = process.argv[2]
+const fileNameToUpload = process.argv[3]
 const assetsPathString = `../../emails/${email}/assets`
 const assetsPath = path.resolve(__dirname, assetsPathString)
 
 const uploadAssets = async () => {
-  await imagemin([`${assetsPath}/*.gif`], `${assetsPath}/`, {
-    plugins: [
-      // resize({ width: 600, options: '>' }),
-      gifsicle({ optimizationLevel: 3, interlaced: true, colors: 256 }),
-    ],
-  })
+  // await imagemin([`${assetsPath}/*.gif`], `${assetsPath}/`, {
+  //   plugins: [
+  //     resize({ width: 600, options: '>' }),
+  //     gifsicle({ optimizationLevel: 3, interlaced: true, colors: 256 }),
+  //   ],
+  // })
 
-  console.log(process.env)
-
-  imagemin([`${assetsPath}/*.{jpg,png}`], `${assetsPath}/`, {
+  await imagemin([`${assetsPath}/*.{jpg,png}`], `${assetsPath}/`, {
     plugins: [
       resize({ width: email === 'logos' ? 200 : 1200, options: '>' }),
       jpegoptim(),
@@ -47,9 +43,11 @@ const uploadAssets = async () => {
     const filePathArray = path.split('/')
     const fileName = filePathArray[filePathArray.length - 1]
 
-    if (fileName === '.DS_Store') {
+    if (fileName === '.DS_Store' || (fileNameToUpload && fileNameToUpload !== fileName)) {
       return
     }
+    
+    console.log('Uploading', fileName, '...')
 
     s3.putObject(
       {
@@ -58,7 +56,13 @@ const uploadAssets = async () => {
         Key: `${email}/${fileName}`,
         Body: Buffer.from(data, 'binary'),
       },
-      (...args) => console.log(args)
+      (err, data) => {
+        if (err) {
+          console.log('An error occured uploading', fileName, ':\n', JSON.stringify(err), '\n\n')
+        } else {
+          console.log('Successfully uploaded', fileName)
+        }
+      }
     )
   }))
 }

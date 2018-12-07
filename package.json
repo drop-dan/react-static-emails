@@ -6,8 +6,7 @@
   "scripts": {
     "start": "react-static start",
     "build": "react-static build",
-    "upload": "node ./src/utils/uploadAssets",
-    "serve": "serve dist -p 3000"
+    "upload": "node ./src/utils/uploadAssets"
   },
   "dependencies": {
     "dotenv": "^6.1.0",
