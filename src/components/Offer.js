@@ -12,6 +12,7 @@ const Offer = ({
   tagline,
   title,
   body,
+  note,
   button = 'Shop now',
   pointRate,
   oldRate,
@@ -65,7 +66,7 @@ const Offer = ({
           </Button>
         )}
       </div>
-
+      {note && <p className="small">{note}</p>}
       {divider && <div className="divider" />}
     </Fragment>
   )
