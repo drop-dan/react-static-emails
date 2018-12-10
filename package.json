@@ -7,7 +7,7 @@
     "start": "react-static start",
     "build": "react-static build",
     "upload": "node ./src/utils/uploadAssets",
-    "save": "git add -A; git commit -m \"Adds new email\"; git pull",
+    "save": "git add -A; git commit -m \"Adds new email\"; git pull; git push",
     "update": "git add -A; git commit -m wip; git pull; git reset head~",
     "reset": "git fetch; git reset origin/master --hard;"
   },
