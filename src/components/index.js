@@ -25,9 +25,20 @@ export const Button = ({
   </div>
 )
 
-export const Image = ({ src, alt = '', ...props }) => (
-  <img src={`https://s3.amazonaws.com/drop-web-font/${src}`} alt={alt} border="0" {...props} />
-)
+export const Image = ({ src, alt = '', href, ...props }) => {
+  const image = <img src={`https://s3.amazonaws.com/drop-web-font/${src}`} alt={alt} border="0" {...props} />
+  
+  if (href) {
+    return (
+    <Link href={href}>
+      {image}
+    </Link>
+    )
+  }
+
+  return image
+}
+
 
 export const HeroImage = ({
   width = '600',
