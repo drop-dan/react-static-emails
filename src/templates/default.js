@@ -10,6 +10,7 @@ const DefaultTemplate = ({
   button,
   children,
   preheaderText,
+  divider = true,
 }) => (
   <Main preheaderText={preheaderText}>
     <Header />
@@ -17,13 +18,13 @@ const DefaultTemplate = ({
     {hero && <HeroImage href={heroLink} image={hero} />}
 
     <div className="py4 px2 mx-auto" style={{ maxWidth: 480 }}>
-      {title && <h1>{title}</h1>}
+      {typeof title === 'string' ? <h1>{title}</h1> : title}
 
       {typeof body === 'string' ? <p className="large">{body}</p> : body}
 
       {button}
 
-      {(title || body || button) && <div className="divider" />}
+      {(title || body || button) && divider && <div className="divider" />}
 
       {children}
     </div>
