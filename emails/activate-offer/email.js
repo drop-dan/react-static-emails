@@ -14,6 +14,28 @@ const ActivateOffer = () => (
         <p className="mt0" style={{ fontSize: 18, fontWeight: '100', color: '#a3a3a3' }}>
           Now it's time to earn points.
         </p>
+        <p>
+          Drop is proud to partner with ClassPass to offer you 12,000 Drop points when you sign-up
+          for their free trial.
+          <br />
+          <br />
+          <b>Here's how:</b>
+          <br />
+          <br />
+          Earn 12,000 Drop points when you sign-up for the free trial
+          <br />
+          <br />
+          You <b>must</b> sign up{' '}
+          <a href="https://click.linksynergy.com/fs-bin/click?id=lksn7JMHhik&offerid=589289.34&type=3&subid=0&u1= {{ public_id }})">
+            through this link
+          </a>
+          <br />
+          <br />
+          You <b>must</b> be a new ClassPass customer
+          <br />
+          <br />
+          Happy Earning!!
+        </p>
       </Fragment>
     }
     button={
