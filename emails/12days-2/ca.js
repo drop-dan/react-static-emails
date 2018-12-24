@@ -19,15 +19,9 @@ const CasperEmail = () => (
     {"{% set groupon = root ~ '537&suid=' ~ suid %}"}
     {"{% set kobo = root ~ '519&suid=' ~ suid %}"}
     {"{% set keurig = root ~ '494&suid=' ~ suid %}"}
-<<<<<<< HEAD
-    {"{% set gift = 'https://b.ewd.io/12GiftagramCA' %}"}
-    {"{% set rocket = root ~ '673&suid=' ~ suid %}"}
-    {"{% set under = 'https://b.ewd.io/12UACA' %}"}
-=======
     {"{% set gift = root ~ '319&suid=' ~ suid %}"}
     {"{% set rocket = root ~ '673&suid=' ~ suid %}"}
     {"{% set under = root ~ '108&suid=' ~ suid %}"}
->>>>>>> 79f3f77225bfc800fa965ace6b813a4e66d5f6da
     {"{% set indigo = root ~ '454&suid=' ~ suid %}"}
     {"{% set links = root ~ '681&suid=' ~ suid %}"}
     {'{% else %}'}
@@ -40,32 +34,11 @@ const CasperEmail = () => (
     {"{% set keurig = 'https://b.ewd.io/12KeurigCA' %}"}
     {"{% set gift = 'https://b.ewd.io/12GiftagramCA' %}"}
     {"{% set rocket = 'https://b.ewd.io/12RocketmilesCA' %}"}
-<<<<<<< HEAD
-    {"{% set under = 'https://b.ewd.io/12UACA' %}"}
-=======
     {"{% set under = 'https://b.ewd.io/12UnderArmourCA' %}"}
->>>>>>> 79f3f77225bfc800fa965ace6b813a4e66d5f6da
     {"{% set indigo = 'https://b.ewd.io/12IndigoCA' %}"}
     {"{% set links = 'https://b.ewd.io/12LinksCA' %}"}
     {'{% endif %}'}
 
-<<<<<<< HEAD
-    <Image href="{{ sephora }}" className="width-100" width="600" src="12days-2/6-sephora2.jpg" />
-    <Image href="{{ andme }}" className="width-100" width="600" src="12days-2/7-23andme2.jpg" />
-    <Image href="{{ gap }}" className="width-100" width="600" src="12days-2/8-gap2.jpg" />
-    <Image href="{{ hello }}" className="width-100" width="600" src="12days-2/9-hellofresh.jpg" />
-    <Image href="{{ groupon }}" className="width-100" width="600" src="12days-2/10-groupon2.jpg" />
-    <Image href="{{ kobo }}" className="width-100" width="600" src="12days-2/11-kobo2.jpg" />
-    <Image href="{{ keurig }}" className="width-100" width="600" src="12days-2/12-keurig2.jpg" />
-
-    <p>Missed the first five days? There's still time to score extra points on these top brands.</p>
-
-    <Image href="{{ gift }}" className="width-100" width="600" src="12days-2/1-giftagram2.jpg" />
-    <Image href="{{ rocket }}" className="width-100" width="600" src="12days-2/2-rocketmiles2.jpg" />
-    <Image href="{{ under }}" className="width-100" width="600" src="12days-2/3-ua2.jpg" />
-    <Image href="{{ indigo }}" className="width-100" width="600" src="12days-2/4-indigo2.jpg" />
-    <Image href="{{ links }}" className="width-100" width="600" src="12days-2/5-links2.jpg" />
-=======
     <Image href="{{ sephora }}" className="width-100" width="600" src="12days/6-sephora.jpg" />
     <Image href="{{ andme }}" className="width-100" width="600" src="12days/7-23andme.jpg" />
     <Image href="{{ gap }}" className="width-100" width="600" src="12days/8-gap.jpg" />
@@ -81,7 +54,6 @@ const CasperEmail = () => (
     <Image href="{{ under }}" className="width-100" width="600" src="12days/3-underarmour.jpg" />
     <Image href="{{ indigo }}" className="width-100" width="600" src="12days/4-indigo.jpg" />
     <Image href="{{ links }}" className="width-100" width="600" src="12days/5-linkslondon.jpg" />
->>>>>>> 79f3f77225bfc800fa965ace6b813a4e66d5f6da
   </DefaultTemplate>
 )
 

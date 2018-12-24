@@ -1,38 +1,31 @@
 import React from 'react'
-import { HeroImage, DefaultTemplate, Offer } from '../../src/components'
+import { HeroImage, DefaultTemplate, Offer, Button } from '../../src/components'
 
 const ThanksGivingEmail = () => (
   <DefaultTemplate
-    preheaderText="This Thanksgiving, cozy up on the couch. It's time to give thanks for friends, family - and football."
-    hero="thanksgiving/thanksgiving-header.png"
-    title="Happy Thanksgiving"
-    body="This Thanksgiving, cozy up on the couch. It's time to give thanks for friends, family - and football."
-    footer={
-      <div>
-        <p className="mx-auto">
-          Looking for Black Friday deals? Take $10 off your first order at QVC, get 15% off + free
-          shipping at New Balance, score 10% off Jet.com's hot holiday picks - and many, many more -
-          only with Drop.
-        </p>
-
-        <HeroImage image="thanksgiving/thanksgiving-footer.png" />
-
-        <p className="small">
-          *Minimum $5 deposit. Eligibility restrictions apply. See website for details.
-        </p>
-      </div>
-    }
-  >
+    preheaderText="For a hot minute only, Warby Parker is serving up four new frames in one totally new color. Get them - and expense them."
+    hero="warby/warby-banner.jpg"
+    title="See the world through Basil Tortoise Fade colored glasses."
+    body="(They're super limited edition, so you know they're good.)"
+    button={<Button href="https://b.ewd.io/WPBenefitsUS">Shop Now</Button>}
+    >
     <Offer
-      image="thanksgiving/thanksgiving-image.jpg"
-      tagline="NEW"
-      title="Get Your $5 Free Play Credit"
-      body="A side of football with your turkey. Sign up at DraftKings and earn 15,000 Drop points, plus a $5 free play credit, with a first deposit of $5 or more! Want more action? After you sign up, play in their free $10,000 fantasy football contest for Thursday night’s game between Atlanta and New Orleans!* "
-      brand="Draft Kings"
-      pointRate="15,000"
+      image="warby/FelixFrame.jpg"
+      tagline="Holiday Exclusives"
+      body="For a hot minute only, Warby Parker is serving up four new frames in one totally new color. Get them - and expense them - by dipping into your FSA or HSA. PLUS, you'll earn 300 points for every $1 spent. "
+      brand="Warby Parker"
+      pointRate="300 PER $1"
+      oldRate="200 PER $1"
       imageWidth="500"
       imageHeight="250"
-      button="Make your pick"
+      button="Shop Now"
+    />
+
+       <Offer
+      title="What's a FSA + HSA?"
+      body="A Flexible Spending Account (FSA) and Health Spending Account (HSA) are benefits offered by employers, designed to give you funds to pay for certain medical expenses. The great news: Warby Parker prescription glasses (and sunglasses!) are covered, so you can order your glasses and expense them, too. Not sure if you have a FSA or HSA? Ask your boss or HR Manager - they'll know what's up."
+      button="Shop Prescription"
+      d divider={false}
     />
   </DefaultTemplate>
 )
