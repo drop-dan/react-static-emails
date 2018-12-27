@@ -4,11 +4,11 @@ import { DefaultTemplate, Offer, Button } from '../../src/components'
 const BlackFridayEmail = () => (
   <DefaultTemplate
     preheaderText="Now you can take advantage of the best laid deals this side of 2018, and get cash back when you do."
-    heroLink="https://b.ewd.io/BFLastChance2"
+    heroLink="https://b.ewd.io/BoxingDayCA"
     hero="boxing-day/boxingday_emailbanner.gif"
     title="You think outside the box. We like that."
     body="Now you can take advantage of the best laid deals this side of 2018, and get cash back when you do."
-    button={<Button href="https://b.ewd.io/BFLastChance2">Shop All</Button>}
+    button={<Button href="https://b.ewd.io/BoxingDayCA">Shop All</Button>}
   >
     {'{% set suid = userAttribute.suid %}'}
     {'{% if suid is defined %}'}

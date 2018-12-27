@@ -1,4 +1,6 @@
 const brands = {
+  '1800Contacts': { name: '1800Contacts', logo: '1800contacts.png' },
+  'American Eagle': { name: 'American Eagle', logo: 'ae.png' },
   BarkBox: { name: 'BarkBox', logo: 'barkbox.png' },
   Bloomingdales: { name: 'Bloomingdales', logo: 'bloomingdales.png' },
   Casper: { name: 'Casper', logo: 'casper.png' },
@@ -11,6 +13,7 @@ const brands = {
   'Forever 21': { name: 'Forever 21', logo: 'forever21.png' },
   'Frank & Oak': { name: 'Frank & Oak', logo: 'frankandoak.png' },
   Gap: { name: 'Gap', logo: 'gap.png' },
+  Groupon: { name: 'Groupon', logo: 'groupon.png' },
   'Happy Socks': { name: 'Happy Socks', logo: 'happysocks.png' }, 
   Hayneedle: { name: 'Hayneedle', logo: 'hayneedle.png' },
   'Hello Fresh': { name: 'HelloFresh', logo: 'hellofresh.png' }, 
@@ -18,6 +21,7 @@ const brands = {
   Fitbit: { name: 'Fitbit', logo: 'fitbit.png' },
   Indigo: { name: 'Indigo', logo: 'indigo.png' },
   Jet: { name: 'Jet​.​com', logo: 'jet.png' },
+  Koodo: { name: 'Koodo', logo: 'koodo.png' },
   Kobo: { name: 'Kobo', logo: 'kobo_us.png' },
   Lululemon: { name: 'Lululemon', logo: 'lululemon.png' },
   "Macy's": { name: "Macy's", logo: 'macys.png' },
