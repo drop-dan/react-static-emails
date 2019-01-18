@@ -3,53 +3,52 @@ import { DefaultTemplate, Offer, Button } from '../../src/components'
 
 const BlackFridayEmail = () => (
   <DefaultTemplate
-    preheaderText="It's Wellness Month at Drop. This week, we're tackling all things healthy eating. Make your resolutions stick with these food-fuelled offers."
-    heroLink="https://b.ewd.io/WellnessFoodCA"
-    hero="wellness-food/wellness_food_emailbanner_ca_3.png"
+    preheaderText="It's Wellness Month at Drop. TThis week, take our top tips and tricks for your best snooze ever straight to the bed."
+    heroLink="https://b.ewd.io/SleepCA"
+    hero="wellness-sleep/wellness_sleep_emailbanner.gif"
     title="It's Wellness Month at Drop."
-    body="This week, we're tackling all things healthy eating. Make your resolutions stick with these food-fuelled offers."
-    button={<Button href="https://b.ewd.io/WellnessFoodCA">Shop All</Button>}
+    body="This week, take our top tips and tricks for your best snooze ever straight to the bed."
+    button={<Button href="https://b.ewd.io/SleepCA">Shop All</Button>}
   >
     {'{% set suid = userAttribute.suid %}'}
     {'{% if suid is defined %}'}
     {"{% set root = 'https://www.earnwithdrop.com/user_offers/activate?offer_id=' %}"}
-    {"{% set hellofresh = root ~ '470&suid=' ~ suid %}"}
-    {"{% set costco = root ~ '668&suid=' ~ suid %}"}
+    {"{% set casper = root ~ '203&suid=' ~ suid %}"}
+    {"{% set indigo = root ~ '454&suid=' ~ suid %}"}
     {"{% set well = root ~ '473&suid=' ~ suid %}"}
-    {"{% set ubereats = root ~ '488&suid=' ~ suid %}"}
+    {"{% set asos = root ~ '539&suid=' ~ suid %}"}
     {'{% else %}'}
-    {"{% set hellofresh = 'https://b.ewd.io/FoodHelloFreshCA' %}"}
-    {"{% set costco = 'https://b.ewd.io/FoodCostcoCA' %}"}
-    {"{% set well = 'https://b.ewd.io/FoodWellCA' %}"}
-    {"{% set ubereats = 'https://b.ewd.io/FoodUberEatsCA' %}"}
+    {"{% set casper = 'https://b.ewd.io/SleepCasperCA' %}"}
+    {"{% set indigo = 'https://b.ewd.io/SleepIndigoCA' %}"}
+    {"{% set well = 'https://b.ewd.io/SleepWellCA' %}"}
+    {"{% set asos = 'https://b.ewd.io/SleepASOSCA' %}"}
     {'{% endif %}'}
 
     <Offer
-      brand="Hello Fresh"
-      body="Looking for someone else to do the healthy meal prep footwork for you? Sign up for HelloFresh and leave your food to the professionals."
-      pointRate="15,000"
-      button='Sign Up'
-      link="{{ hellofresh }}"
-      note="Offer available only for new customers."
+      brand="Tip 1: Get in the sleep-centric mindset."
+      body="We recommend The Sleep Revolution: Transforming Your Life, One Night at a Time for Ariana Huffington's take on how our sleep dismissive culture impacts our health, relationships, and overall happiness."
+      image="wellness-sleep/Sleep_bookCA.jpg"
+      link="{{ indigo }}"
     />
     <Offer
-      brand="Costco"
-      body="Cut down on trips to the grocery store by stocking up on all your food faves. Protein powder lovers stop here."
-      pointRate="25,000"
-      link="{{ costco }}"
-      note="Offer available only for new members."
-    />
-    <Offer
-      brand="Well"
-      body="The trusted online marketplace serves up non-GMO, organic, gluten-free and vegan products, delivered straight to your door in a snap."
-      pointRate="40 PER $1"
+      brand="Tip 2: When sheep aren't helping, accessorize."
+      body="Some nights don't play nice. When you're at your wits end with sheep counting, try sleep's best accessories on for size. Ear plugs, sleep masks, lavender pillow spray, essential oils, and melatonin are your best bets for a full night of shut eye."
+      image="wellness-sleep/eye_maskCA.jpg"
       link="{{ well }}"
     />
     <Offer
-      brand="Uber Eats"
-      body="In the mood for Indian? Thai? Italian? Chinese? Uber Eats has it all - and then some. Order from your fave local watering holes and discover new hotspots you didn't know existed."
-      pointRate="12,500 FIRST ORDER | 750 PER ORDER"
-      link="{{ ubereats }}"
+      brand="Tip 3: Invest in a quality snooze."
+      tagline="Save $100 on orders of $1000+ with code: WINTER"
+      body="All the lavender sprays in the world can't save a bed from the 1970s. Upgrade your springboard to our favourite classic from Casper: its most popular bed and namesake, the Casper. The modern mattress differentiates itself with zoned support, pressure relief, and 4 layers of premium foam. We can get on board with 4 layers of foam."
+      image="wellness-sleep/Casper_mattress.jpg"
+      link="{{ casper }}"
+      note="Offer ends 1/21. See site for details."
+    />
+    <Offer
+      brand="Tip 4: Zzz and look good while you're at it."
+      body="Take a cue from Marie Kondo: if your holey jammies aren't sparking joy, ditch them for a matching set from ASOS. We recommend satin for added snooze-time."
+      image="wellness-sleep/ASOS_PJs.jpg"
+      link="{{ asos }}"
       divider={false}
     />
   </DefaultTemplate>

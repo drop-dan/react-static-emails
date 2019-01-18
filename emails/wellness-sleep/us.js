@@ -35,7 +35,6 @@ const BlackFridayEmail = () => (
       image="wellness-sleep/EyeMask.jpg"
       body="Some nights don't play nice. When you're at your wits end with sheep counting, try sleep's best accessories on for size. Ear plugs, sleep masks, lavender pillow spray, essential oils and melatonin are your best bets for a full night of shut eye."
       link="{{ jet }}"
-      note="Offer available only for new customers."
     />
     <Offer
       image="wellness-sleep/Mattress_Casper.jpg"
