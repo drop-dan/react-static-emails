@@ -11,10 +11,15 @@ export { default as OfferRowTemplate } from '../templates/offer-row'
 
 export const Header = () => <LogoBar />
 
-export const Link = ({ href, children, ...props }) => (
-  <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
-    {children}
-  </a>
+export const Link = ({
+  href, children, label, ...props
+}) => (
+  <Fragment>
+    {label && <span>{label}</span>}
+    <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+      {children}
+    </a>
+  </Fragment>
 )
 
 export const Button = ({
@@ -25,20 +30,19 @@ export const Button = ({
   </div>
 )
 
-export const Image = ({ src, alt = '', href, ...props }) => {
-  const image = <img src={`https://s3.amazonaws.com/drop-web-font/${src}`} alt={alt} border="0" {...props} />
-  
+export const Image = ({
+  src, alt = '', href, ...props
+}) => {
+  const image = (
+    <img src={`https://s3.amazonaws.com/drop-web-font/${src}`} alt={alt} border="0" {...props} />
+  )
+
   if (href) {
-    return (
-    <Link href={href}>
-      {image}
-    </Link>
-    )
+    return <Link href={href}>{image}</Link>
   }
 
   return image
 }
-
 
 export const HeroImage = ({
   width = '600',

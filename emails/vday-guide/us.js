@@ -1,5 +1,5 @@
 import React from 'react'
-import { Offer, DefaultTemplate, Button } from '../../src/components'
+import { Offer, DefaultTemplate, Button, Link } from '../../src/components'
 
 const CasperEmail = () => (
   <DefaultTemplate
@@ -9,38 +9,38 @@ const CasperEmail = () => (
     body="Give the gift of no re-gift with our top picks for everyone on your list."
     button={<Button>Shop All</Button>}
   >
-     {'{% set suid = userAttribute.suid %}'}
-     {'{% if suid is defined %}'}
-     {"{% set root = 'https://www.earnwithdrop.com/user_offers/activate?offer_id=' %}"}
-     {"{% set sephoraus = root ~ '647&suid=' ~ suid %}"}
-     {"{% set samsclub = root ~ '322&suid=' ~ suid %}"}
-     {"{% set nike = root ~ '580&suid=' ~ suid %}"}
-     {"{% set homedepot = root ~ '803&suid=' ~ suid %}"}
-     {"{% set harrys = root ~ '801&suid=' ~ suid %}"}
-     {"{% set kobous = root ~ '518&suid=' ~ suid %}"}
-     {"{% set firstleaf = root ~ '794&suid=' ~ suid %}"}
-     {"{% set giftus = 'https://b.ewd.io/12GiftagramUS' %}"}
-     {"{% set rocketus = root ~ '666&suid=' ~ suid %}"}
-     {"{% set puma = root ~ '800&suid=' ~ suid %}"}
-     {"{% set macys = root ~ '674&suid=' ~ suid %}"}
-     {"{% set backcountry = root ~ '687&suid=' ~ suid %}"}
-     {'{% else %}'}
-     {"{% set sephoraus = 'https://b.ewd.io/12SephoraUS' %}"}
-     {"{% set samsclub = 'https://b.ewd.io/12SamsClubUS' %}"}
-     {"{% set nike = 'https://b.ewd.io/12NikeUS' %}"}
-     {"{% set homedepot = 'https://b.ewd.io/12HomeDepotUS' %}"}
-     {"{% set harrys = 'https://b.ewd.io/12HarrysUS' %}"}
-     {"{% set kobous = 'https://b.ewd.io/12KoboUS' %}"}
-     {"{% set firstleaf = 'https://b.ewd.io/12FirstleafUS' %}"}
-     {"{% set giftus = 'https://b.ewd.io/12GiftagramUS' %}"}
-     {"{% set rocketus = 'https://b.ewd.io/12RocketmilesUS' %}"}
-     {"{% set puma = 'https://b.ewd.io/12PumaUS' %}"}
-     {"{% set macys = 'https://b.ewd.io/12MacysUS' %}"}
-     {"{% set backcountry = 'https://b.ewd.io/12BackcountryUS' %}"}
-     {'{% endif %}'}
+    {'{% set suid = userAttribute.suid %}'}
+    {'{% if suid is defined %}'}
+    {"{% set root = 'https://www.earnwithdrop.com/user_offers/activate?offer_id=' %}"}
+    {"{% set sephoraus = root ~ '647&suid=' ~ suid %}"}
+    {"{% set samsclub = root ~ '322&suid=' ~ suid %}"}
+    {"{% set nike = root ~ '580&suid=' ~ suid %}"}
+    {"{% set homedepot = root ~ '803&suid=' ~ suid %}"}
+    {"{% set harrys = root ~ '801&suid=' ~ suid %}"}
+    {"{% set kobous = root ~ '518&suid=' ~ suid %}"}
+    {"{% set firstleaf = root ~ '794&suid=' ~ suid %}"}
+    {"{% set giftus = 'https://b.ewd.io/12GiftagramUS' %}"}
+    {"{% set rocketus = root ~ '666&suid=' ~ suid %}"}
+    {"{% set puma = root ~ '800&suid=' ~ suid %}"}
+    {"{% set macys = root ~ '674&suid=' ~ suid %}"}
+    {"{% set backcountry = root ~ '687&suid=' ~ suid %}"}
+    {'{% else %}'}
+    {"{% set sephoraus = 'https://b.ewd.io/12SephoraUS' %}"}
+    {"{% set samsclub = 'https://b.ewd.io/12SamsClubUS' %}"}
+    {"{% set nike = 'https://b.ewd.io/12NikeUS' %}"}
+    {"{% set homedepot = 'https://b.ewd.io/12HomeDepotUS' %}"}
+    {"{% set harrys = 'https://b.ewd.io/12HarrysUS' %}"}
+    {"{% set kobous = 'https://b.ewd.io/12KoboUS' %}"}
+    {"{% set firstleaf = 'https://b.ewd.io/12FirstleafUS' %}"}
+    {"{% set giftus = 'https://b.ewd.io/12GiftagramUS' %}"}
+    {"{% set rocketus = 'https://b.ewd.io/12RocketmilesUS' %}"}
+    {"{% set puma = 'https://b.ewd.io/12PumaUS' %}"}
+    {"{% set macys = 'https://b.ewd.io/12MacysUS' %}"}
+    {"{% set backcountry = 'https://b.ewd.io/12BackcountryUS' %}"}
+    {'{% endif %}'}
 
     <Offer
-      brand="The Traditionalist" 
+      brand="The Traditionalist"
       image="vday-guide/giftguide_traditionalist.jpg"
       imageWidth="600"
       imageHeight="425"
@@ -49,7 +49,9 @@ const CasperEmail = () => (
       divider={false}
       button="Shop All"
     />
-  
+<<<<<<< HEAD
+=======
+
     <Offer
       body="1. The Babar with Succulent — Urban Stems"
       link="{{ contacts }}"
@@ -80,12 +82,7 @@ const CasperEmail = () => (
       divider={false}
       button={false}
     />
-    <Offer
-      body="6. Ghost Iris — MVMT"
-      link="{{ contacts }}"
-      divider={false}
-      button={false}
-    />
+    <Offer body="6. Ghost Iris — MVMT" link="{{ contacts }}" divider={false} button={false} />
     <Offer
       body="7. Sophie Harper, Front to Back Open Heart Huggies — Rocksbox"
       link="{{ contacts }}"
@@ -104,12 +101,70 @@ const CasperEmail = () => (
       divider={false}
       button={false}
     />
-    <Offer
-      body="10. The Bombshell - Urban Stems"
-      link="{{ contacts }}"
-      button={false}
-    />
+    <Offer body="10. The Bombshell - Urban Stems" link="{{ contacts }}" button={false} />
+>>>>>>> 72c0b0b3ca6d4258cf48761e9cba477ca1b5baf0
 
+    <Link
+      href="{{  urbanstems  }}"
+      label="1. The Babar with Succulent — "
+    >
+      Urban Stems
+    </Link>
+    <Link
+      href="{{  sephora  }}"
+      label="2. Becca’s Ultimate Lipstick Love — "
+    >
+      Sephora
+    </Link>
+    <Link
+      href="{{  sephora  }}"
+      label="3. Disc Charm Necklace — "
+    >
+      Forever 21
+    </Link>
+    <Link
+      href="{{  sephora  }}"
+      label="4. Teak + Twine The Rose — "
+    >
+      Giftagram
+    </Link>
+    <Link
+      href="{{  sephora  }}"
+      label="5. Sugarfina Vice 3 Piece Bento — "
+    >
+      Giftagram
+    </Link>
+    <Link
+      href="{{  sephora  }}"
+      label="6. Ghost Iris Watch — "
+    >
+      MVMT
+    </Link>
+    <Link
+      href="{{  sephora  }}"
+      label="7. Sophie Harper, Front to Back Open Heart Huggies — "
+    >
+      Rocksbox
+    </Link>
+    <Link
+      href="{{  sephora  }}"
+      label="8. Valentine’s Day Heart Tin — "
+    >
+      Godiva
+    </Link>
+    <Link
+      href="{{  sephora  }}"
+      label="9. Birchbox Subscription - "
+    >
+      Birchbox
+    </Link>
+    <Link
+      href="{{  sephora  }}"
+      label="10. The Bombshell - "
+    >
+      Urban Stems
+    </Link>
+    
     <Offer
       image="vday-guide/giftguide_homebody.jpg"
       imageWidth="600"
@@ -118,12 +173,16 @@ const CasperEmail = () => (
       body="Fall in love with quality food and drink - without ever having to leave the couch."
       link="https://b.ewd.io/12DaysHimUS"
     />
-    <Offer
-      body="1. Staub Ceramic 3 Piece Mini Heart Cocettes Set — Sur La Table"
-      link="{{ contacts }}"
-      divider={false}
-      button={false}
-    />
+    <Link
+<<<<<<< HEAD
+      href="{{  surlatable  }}"
+=======
+      href="https://b.ewd.io/HpnaznWoVR"
+>>>>>>> 72c0b0b3ca6d4258cf48761e9cba477ca1b5baf0
+      label="1. Staub Ceramic 3 Piece Mini Heart Cocettes Set — "
+    >
+      Sur La Table
+    </Link>
     <Offer
       body="2. The 5 Love Languages by Gary Chapman — Barnes & Noble"
       link="{{ contacts }}"
@@ -247,12 +306,7 @@ const CasperEmail = () => (
       divider={false}
       button={false}
     />
-    <Offer
-      body="6. Valentine's Day BarkBox"
-      link="{{ contacts }}"
-      divider={false}
-      button={false}
-    />
+    <Offer body="6. Valentine's Day BarkBox" link="{{ contacts }}" divider={false} button={false} />
   </DefaultTemplate>
 )
 

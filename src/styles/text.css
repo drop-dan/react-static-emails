@@ -10,7 +10,8 @@ h2,
 h3,
 h4,
 p,
-a {
+a,
+span {
   font-family: Sailec, sans-serif;
   font-style: normal;
   font-stretch: normal;
@@ -42,6 +43,7 @@ h3 {
 }
 
 p,
+span,
 a,
 li {
   font-weight: normal;
