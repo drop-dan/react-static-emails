@@ -49,11 +49,6 @@ const CasperEmail = () => (
       divider={false}
       button="Shop All"
     />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 72c0b0b3ca6d4258cf48761e9cba477ca1b5baf0
 
     <Offer
       body="1. The Babar with Succulent — Urban Stems"
@@ -105,72 +100,37 @@ const CasperEmail = () => (
       button={false}
     />
     <Offer body="10. The Bombshell - Urban Stems" link="{{ contacts }}" button={false} />
-<<<<<<< HEAD
->>>>>>> 72c0b0b3ca6d4258cf48761e9cba477ca1b5baf0
-=======
->>>>>>> 72c0b0b3ca6d4258cf48761e9cba477ca1b5baf0
-
-    <Link
-      href="{{  urbanstems  }}"
-      label="1. The Babar with Succulent — "
-    >
+    <Link href="{{  urbanstems  }}" label="1. The Babar with Succulent — ">
       Urban Stems
     </Link>
-    <Link
-      href="{{  sephora  }}"
-      label="2. Becca’s Ultimate Lipstick Love — "
-    >
+    <Link href="{{  sephora  }}" label="2. Becca’s Ultimate Lipstick Love — ">
       Sephora
     </Link>
-    <Link
-      href="{{  sephora  }}"
-      label="3. Disc Charm Necklace — "
-    >
+    <Link href="{{  sephora  }}" label="3. Disc Charm Necklace — ">
       Forever 21
     </Link>
-    <Link
-      href="{{  sephora  }}"
-      label="4. Teak + Twine The Rose — "
-    >
+    <Link href="{{  sephora  }}" label="4. Teak + Twine The Rose — ">
       Giftagram
     </Link>
-    <Link
-      href="{{  sephora  }}"
-      label="5. Sugarfina Vice 3 Piece Bento — "
-    >
+    <Link href="{{  sephora  }}" label="5. Sugarfina Vice 3 Piece Bento — ">
       Giftagram
     </Link>
-    <Link
-      href="{{  sephora  }}"
-      label="6. Ghost Iris Watch — "
-    >
+    <Link href="{{  sephora  }}" label="6. Ghost Iris Watch — ">
       MVMT
     </Link>
-    <Link
-      href="{{  sephora  }}"
-      label="7. Sophie Harper, Front to Back Open Heart Huggies — "
-    >
+    <Link href="{{  sephora  }}" label="7. Sophie Harper, Front to Back Open Heart Huggies — ">
       Rocksbox
     </Link>
-    <Link
-      href="{{  sephora  }}"
-      label="8. Valentine’s Day Heart Tin — "
-    >
+    <Link href="{{  sephora  }}" label="8. Valentine’s Day Heart Tin — ">
       Godiva
     </Link>
-    <Link
-      href="{{  sephora  }}"
-      label="9. Birchbox Subscription - "
-    >
+    <Link href="{{  sephora  }}" label="9. Birchbox Subscription - ">
       Birchbox
     </Link>
-    <Link
-      href="{{  sephora  }}"
-      label="10. The Bombshell - "
-    >
+    <Link href="{{  sephora  }}" label="10. The Bombshell - ">
       Urban Stems
     </Link>
-    
+
     <Offer
       image="vday-guide/giftguide_homebody.jpg"
       imageWidth="600"
@@ -179,18 +139,7 @@ const CasperEmail = () => (
       body="Fall in love with quality food and drink - without ever having to leave the couch."
       link="https://b.ewd.io/12DaysHimUS"
     />
-    <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-      href="{{  surlatable  }}"
-=======
-      href="https://b.ewd.io/HpnaznWoVR"
->>>>>>> 72c0b0b3ca6d4258cf48761e9cba477ca1b5baf0
-=======
-      href="https://b.ewd.io/HpnaznWoVR"
->>>>>>> 72c0b0b3ca6d4258cf48761e9cba477ca1b5baf0
-      label="1. Staub Ceramic 3 Piece Mini Heart Cocettes Set — "
-    >
+    <Link href="{{  surlatable  }}" label="1. Staub Ceramic 3 Piece Mini Heart Cocettes Set — ">
       Sur La Table
     </Link>
     <Offer

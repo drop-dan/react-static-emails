@@ -14,12 +14,12 @@ export const Header = () => <LogoBar />
 export const Link = ({
   href, children, label, ...props
 }) => (
-  <Fragment>
+  <p>
     {label && <span>{label}</span>}
     <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
       {children}
     </a>
-  </Fragment>
+  </p>
 )
 
 export const Button = ({
