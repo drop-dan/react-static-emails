@@ -50,7 +50,10 @@ const CasperEmail = () => (
       button="Shop All"
     />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 72c0b0b3ca6d4258cf48761e9cba477ca1b5baf0
 
     <Offer
       body="1. The Babar with Succulent — Urban Stems"
@@ -102,6 +105,9 @@ const CasperEmail = () => (
       button={false}
     />
     <Offer body="10. The Bombshell - Urban Stems" link="{{ contacts }}" button={false} />
+<<<<<<< HEAD
+>>>>>>> 72c0b0b3ca6d4258cf48761e9cba477ca1b5baf0
+=======
 >>>>>>> 72c0b0b3ca6d4258cf48761e9cba477ca1b5baf0
 
     <Link
@@ -175,7 +181,11 @@ const CasperEmail = () => (
     />
     <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
       href="{{  surlatable  }}"
+=======
+      href="https://b.ewd.io/HpnaznWoVR"
+>>>>>>> 72c0b0b3ca6d4258cf48761e9cba477ca1b5baf0
 =======
       href="https://b.ewd.io/HpnaznWoVR"
 >>>>>>> 72c0b0b3ca6d4258cf48761e9cba477ca1b5baf0
