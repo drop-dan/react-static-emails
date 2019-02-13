@@ -39,68 +39,10 @@ const CasperEmail = () => (
     {"{% set backcountry = 'https://b.ewd.io/12BackcountryUS' %}"}
     {'{% endif %}'}
 
-    <Offer
-      brand="The Traditionalist"
-      image="vday-guide/giftguide_traditionalist.jpg"
-      imageWidth="600"
-      imageHeight="425"
-      title="Why mess with a good thing? For the classic love in mind, shop traditional gifts with a modern twist."
-      link="https://b.ewd.io/12DaysHerUS"
-      divider={false}
-      button="Shop All"
-    />
-
-    <Offer
-      body="1. The Babar with Succulent — Urban Stems"
-      link="{{ contacts }}"
-      divider={false}
-      button={false}
-    />
-    <Offer
-      body="2. Becca’s Ultimate Lipstick Love — Sephora"
-      link="{{ contacts }}"
-      divider={false}
-      button={false}
-    />
-    <Offer
-      body="3. Disc Charm Necklace — Forever 21"
-      link="{{ contacts }}"
-      divider={false}
-      button={false}
-    />
-    <Offer
-      body="4. Teak + Twine The Rose — Giftagram"
-      link="{{ contacts }}"
-      divider={false}
-      button={false}
-    />
-    <Offer
-      body="5. Sugarfina Vice 3 Piece Bento — Giftagram"
-      link="{{ contacts }}"
-      divider={false}
-      button={false}
-    />
-    <Offer body="6. Ghost Iris — MVMT" link="{{ contacts }}" divider={false} button={false} />
-    <Offer
-      body="7. Sophie Harper, Front to Back Open Heart Huggies — Rocksbox"
-      link="{{ contacts }}"
-      divider={false}
-      button={false}
-    />
-    <Offer
-      body="8. Valentine’s Day Heart Tin — Godiva"
-      link="{{ contacts }}"
-      divider={false}
-      button={false}
-    />
-    <Offer
-      body="9. Birchbox Subscription - Birchbox"
-      link="{{ contacts }}"
-      divider={false}
-      button={false}
-    />
-    <Offer body="10. The Bombshell - Urban Stems" link="{{ contacts }}" button={false} />
-    <Link href="{{  urbanstems  }}" label="1. The Babar with Succulent — ">
+    <Link
+      href="{{  urbanstems  }}"
+      label="1. The Babar with Succulent — "
+    >
       Urban Stems
     </Link>
     <Link href="{{  sephora  }}" label="2. Becca’s Ultimate Lipstick Love — ">
