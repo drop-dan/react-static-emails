@@ -1,44 +1,19 @@
-TODO:
-Add proptypes to components
-Add git automation scripts
-rename component props for marketing needs
-add more component abstraction
-remove react static and replace with webpack
+# SETUP
 
-DONE:
-Add compression and resizing to images
-remove DS_store from upload script
+- Install [vscode](https://code.visualstudio.com/)
+- Install [node](https://code.visualstudio.com/)
+- git clone https://github.com/drop-dan/react-static-emails.git
+- `cd react-static-emails; npm install`
+- add .env with s3 secrets
 
-SETUP:
-install vscode
-install node and npm
+# CREATING EMAIL
 
-install git
-install homebrew (https://brew.sh/)
-brew install graphicsmagick
-clone repo
-npm install
-add .env with s3 secrets
-
-to make a new email:
-duplicate existing email folder and rename changes as necessary
-add images to assets folder
-run `npm run upload "folder name"`
-run `npm run start "folder name"`
-update as necessary until finished
-run `npm run build "folder name"`
-copy html from `html/index.html`
-paste to leanplum
-run `npm run save` to push changes to git
-
-# React-Static - Basic Example
-
-This example is the most basic version of react-static available. It includes:
-
-- Babel
-- CSS imports
-- Image imports
-- File imports
-- Automatic Routing
-
-To get started, run `react-static create` and use the `basic` template.
+1. duplicate existing email folder and rename changes as necessary
+2. add images to assets folder
+3. run `npm run upload "folder name"`
+4. run `npm run start "folder name"`
+5. update as necessary until finished
+6. run `npm run build "folder name"`
+7. copy html from `html/index.html`
+8. paste to leanplum
+9. run `npm run save` to push changes to git
