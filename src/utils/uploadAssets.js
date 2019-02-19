@@ -3,8 +3,7 @@ const fs = require('fs')
 const imagemin = require('imagemin')
 const optipng = require('imagemin-optipng')
 const jpegoptim = require('imagemin-jpegoptim')
-const gifsicle = require('imagemin-gifsicle')
-const { walk, resize, uploadImageFromFile } = require('./uploadUtils')
+const { walk, resize } = require('./uploadUtils')
 const AWS = require('aws-sdk')
 
 require('dotenv').load()
@@ -21,13 +20,6 @@ const assetsPathString = `../../emails/${email}/assets`
 const assetsPath = path.resolve(__dirname, assetsPathString)
 
 const uploadAssets = async () => {
-  // await imagemin([`${assetsPath}/*.gif`], `${assetsPath}/`, {
-  //   plugins: [
-  //     resize({ width: 600, options: '>' }),
-  //     gifsicle({ optimizationLevel: 3, interlaced: true, colors: 256 }),
-  //   ],
-  // })
-
   await imagemin([`${assetsPath}/*.{jpg,png}`], `${assetsPath}/`, {
     plugins: [
       resize({ width: email === 'logos' ? 200 : 1200, options: '>' }),
