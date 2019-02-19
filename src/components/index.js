@@ -13,14 +13,24 @@ export const Header = () => <LogoBar />
 
 export const Link = ({
   href, children, label, ...props
-}) => (
-  <p>
-    {label && <span>{label}</span>}
+}) => {
+  const link = (
     <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
       {children}
     </a>
-  </p>
-)
+  )
+
+  if (!label) {
+    return link
+  }
+
+  return (
+    <p>
+      <span>{label}</span>
+      {link}
+    </p>
+  )
+}
 
 export const Button = ({
   children, className, style, ...props
