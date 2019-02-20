@@ -7,7 +7,7 @@
 # production
 /dist
 /tmp
-/public
+/public/index.js
 
 # misc
 .DS_Store
