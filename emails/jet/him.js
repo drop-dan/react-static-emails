@@ -3,7 +3,7 @@ import { Button, Offer, DefaultTemplate } from '../../src/components'
 
 const JetHer = () => (
   <DefaultTemplate
-    preheaderText="Starting tomorrow, score the best deals on your favorite brands - only with Drop."
+    preheader="Starting tomorrow, score the best deals on your favorite brands - only with Drop."
     hero="jet/him.gif"
     title="And this is just our highlight reel."
     body="Shop 1000s of items from Jet - on sale for a hot minute (Cyber Week ends Sunday!)."

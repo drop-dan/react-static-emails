@@ -3,7 +3,7 @@ import { DefaultTemplate, Button } from '../../src/components'
 
 const ReferralUpsell = () => (
   <DefaultTemplate
-    preheaderText="For a limited time only, refer a friend to Drop and you'll both get *$5 in Drop points* to treat yourselves."
+    preheader="For a limited time only, refer a friend to Drop and you'll both get *$5 in Drop points* to treat yourselves."
     hero="referral-upsell/header.png"
     title="This #GivingTuesday, give the gift of caffeine."
     body={

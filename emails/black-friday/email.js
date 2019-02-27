@@ -3,7 +3,7 @@ import { DefaultTemplate, Offer, Button } from '../../src/components'
 
 const BlackFridayEmail = () => (
   <DefaultTemplate
-    preheaderText="Starting tomorrow, score the best deals on your favorite brands - only with Drop."
+    preheader="Starting tomorrow, score the best deals on your favorite brands - only with Drop."
     heroLink="https://b.ewd.io/BlackFridayCA"
     hero="black-friday/bf-header.gif"
     title="Black Friday On Now"

@@ -3,7 +3,7 @@ import { Offer, DefaultTemplate, Button } from '../../src/components'
 
 const CasperEmail = () => (
   <DefaultTemplate
-    preheaderText="Starting tomorrow, score the best deals on your favorite brands - only with Drop."
+    preheader="Starting tomorrow, score the best deals on your favorite brands - only with Drop."
     hero="casper/casper-header.jpg"
     title="10% Off, 10% Back"
     body="This Black Friday, Enjoy 10% off your next mattress order.  Plus, get 10% back in points."

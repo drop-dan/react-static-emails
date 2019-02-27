@@ -4,7 +4,7 @@ import { DefaultTemplate, Button } from '../../src/components'
 const ActivateOffer = () => (
   <DefaultTemplate
     divider={false}
-    preheaderText="You just activated an offer from Barkbox. Now it's time to earn points."
+    preheader="You just activated an offer from Barkbox. Now it's time to earn points."
     title={<h1 className="mb0">Your offer is active!</h1>}
     body={
       <Fragment>
