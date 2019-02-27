@@ -25,6 +25,20 @@ img {
   max-width: 600px;
 }
 
+.ReactCodeMirror {
+  width: 50%;
+}
+
+.CodeMirror {
+  height: auto !important;
+}
+
+.scroller {
+  margin: 0 auto;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
 .preheader-text {
   display: none;
   font-size: 1px;

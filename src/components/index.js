@@ -1,15 +1,10 @@
 import React, { Fragment } from 'react'
-import { LogoBar } from './'
 
 export { default as Main } from './Main'
 export { default as Footer } from './Footer'
 export { default as Offer } from './Offer'
 export { default as OfferRow } from './OfferRow'
-export { default as LogoBar } from './LogoBar'
 export { default as DefaultTemplate } from '../templates/default'
-export { default as OfferRowTemplate } from '../templates/offer-row'
-
-export const Header = () => <LogoBar />
 
 export const Link = ({
   href, children, label, ...props
@@ -91,16 +86,16 @@ export const PointRate = ({
   </Fragment>
 )
 
-export const OfferBlurb = ({
-  title, pointRate, body, button,
-}) => (
-  <Fragment>
-    <h1 className="mt4 mb0">{title}</h1>
+export const LogoBar = ({ border = true }) => (
+  <div className={`logo-bar${border ? ' border-top' : ''}`}>
+    <Link href="https://b.ewd.io/T3TSSpSvuR" style={{ float: 'left' }}>
+      <Image className="drop-logo" alt="Logo" src="logo.png" width="60" height="60" border="0" />
+    </Link>
 
-    {pointRate && <PointRate rate={pointRate} />}
-
-    {typeof body === 'string' ? <p className="my1 large">{body}</p> : body}
-
-    {button}
-  </Fragment>
+    <Button className="light m0" href="https://b.ewd.io/T3TSSpSvuR" style={{ float: 'right' }}>
+      OPEN DROP
+    </Button>
+  </div>
 )
+
+export const Header = () => <LogoBar />

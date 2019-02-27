@@ -1,5 +1,5 @@
 import React from 'react'
-import { Main, Header, HeroImage, Footer } from '../../src/components'
+import { Main, Header, HeroImage, Footer, Button } from '../../src/components'
 
 const DefaultTemplate = ({
   footer,
@@ -8,11 +8,12 @@ const DefaultTemplate = ({
   title,
   body,
   button,
+  link,
   children,
-  preheaderText,
+  preheader,
   divider = true,
 }) => (
-  <Main preheaderText={preheaderText}>
+  <Main preheader={preheader}>
     <Header />
 
     {hero && <HeroImage href={heroLink} image={hero} />}
@@ -22,7 +23,7 @@ const DefaultTemplate = ({
 
       {typeof body === 'string' ? <p className="large">{body}</p> : body}
 
-      {button}
+      {button && <Button href={link}>{button}</Button>}
 
       {(title || body || button) && divider && <div className="divider" />}
 

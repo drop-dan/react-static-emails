@@ -6,16 +6,18 @@ const OfferRow = ({
   link,
   brand,
   button = 'Shop now',
-  pointRate,
-  oldRate,
   divider = true,
   body,
   logo,
-  maxWidth = 450,
   invert = false,
   note,
   image,
+  ...props
 }) => {
+  const pointRate = props.pointrate || props.pointRate
+  const oldRate = props.oldrate || props.oldRate
+  const maxWidth = props.maxwidth || props.maxWidth || 450
+
   const brandLogo = brandData[brand] && brandData[brand].logo
   return (
     <Fragment>

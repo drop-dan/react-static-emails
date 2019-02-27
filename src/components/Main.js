@@ -9,11 +9,11 @@ import utils from '../styles/utils.css'
 
 const styleHeaderTag = `${app.toString()} ${button.toString()} ${offer.toString()} ${text.toString()} ${spacing.toString()} ${utils.toString()}`
 
-const Main = ({ preheaderText, children }) => (
+const Main = ({ preheader, children }) => (
   <div className="main" style={{ minWidth: 330 }}>
     <style>{styleHeaderTag}</style>
 
-    {preheaderText && <div className="preheader-text">{preheaderText}</div>}
+    {preheader && <div className="preheader-text">{preheader}</div>}
 
     <div>{children}</div>
   </div>

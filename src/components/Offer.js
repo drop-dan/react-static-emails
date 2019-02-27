@@ -4,8 +4,6 @@ import brandData from '../utils/brandData'
 
 const Offer = ({
   image,
-  imageWidth = '300',
-  imageHeight = '300',
   logo,
   link,
   brand,
@@ -14,10 +12,14 @@ const Offer = ({
   body,
   note,
   button = 'Shop now',
-  pointRate,
-  oldRate,
   divider = true,
+  ...props
 }) => {
+  const pointRate = props.pointrate || props.pointRate
+  const oldRate = props.oldrate || props.oldRate
+  const imageWidth = props.imagewidth || props.imageWidth || '300'
+  const imageHeight = props.imageheight || props.imageHeight || '300'
+
   const brandLogo = brandData[brand] && brandData[brand].logo
   return (
     <Fragment>
