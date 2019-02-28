@@ -6,6 +6,34 @@
   <meta name="x-apple-disable-message-reformatting" />
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <style>
+  .ReactCodeMirror {
+    width: 50%;
+  }
+
+  .CodeMirror {
+    height: 100% !important;
+  }
+
+  .CodeMirror span {
+    font-size: 13px;
+  }
+
+  .scroller {
+    margin: 0 auto;
+    overflow-y: scroll;
+    height: 100%;
+  }
+
+  .fixed-ui {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #efefef;
+    z-index: 30;
+  }
+  </style>
 </head>
 
 <body style="height: 100%; width: 100%; margin: 0; padding: 0; background-color: #efefef">

@@ -1,17 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { hot } from 'react-hot-loader'
-import CodeMirror from 'react-codemirror'
-import defaultEmail from './emails/default'
 import 'codemirror/mode/jsx/jsx'
-import { updateEmailNode } from './utils/cloneUtils'
+
+import defaultEmail from './emails/default'
+import offerEmail from './emails/offer'
+import Editor from './interface/editor'
+import EmailList from './interface/EmailList'
+
+const templates = [
+  { name: 'Default Template', value: defaultEmail },
+  { name: 'Offer Template', value: offerEmail },
+]
 
 class Base extends React.Component {
   constructor () {
     super()
-    this.state = { savedEmails: [] }
-    localStorage.setItem('savedEmails', JSON.stringify([{ name: 'Default Template', value: defaultEmail }]))
+    this.state = { savedEmails: {} }
     this.updateEmail = this.updateEmail.bind(this)
+    this.closeEmail = this.closeEmail.bind(this)
+    localStorage.setItem('savedEmails', JSON.stringify({ test: defaultEmail }))
   }
 
   componentWillMount () {
@@ -19,35 +27,26 @@ class Base extends React.Component {
   }
 
   updateEmail (email) {
+    // this.state.savedEmails
     this.setState({ email })
   }
 
+  closeEmail () {
+    this.setState({ email: null })
+  }
+
   render () {
+    console.log(this.state.savedEmails)
     return (
       <div>
         {this.state.email ? (
-          <div>
-            <p style={{ margin: 15, textAlign: 'left' }} onClick={() => this.setState({ email: null })}>Back</p>
-            <div style={{ display: 'flex', alignContent: 'flex-start' }}>
-              <CodeMirror
-                autoFocus
-                value={this.state.email.value}
-                options={{ lineNumbers: true, mode: 'jsx' }}
-                onChange={value => this.updateEmail({ value })}
-              />
-              <div className="scroller">
-                {updateEmailNode(this.state.email.value)}
-              </div>
-            </div>
-          </div>
+          <Editor email={this.state.email} close={this.closeEmail} />
         ) : (
-          <div>
-            {this.state.savedEmails.map((email, index) => (
-              <div key={"email" + index} onClick={() => this.updateEmail(email)}>
-                <p>{email.name}</p>
-              </div>
-            ))}
-          </div>
+          <EmailList
+            templates={templates}
+            emails={Object.values(this.state.savedEmails)}
+            updateEmail={this.updateEmail}
+          />
         )}
       </div>
     )
@@ -59,7 +58,7 @@ if (typeof document !== 'undefined') {
   const render = Comp => {
     renderMethod(<Comp />, document.getElementById('root'))
   }
-  
+
   render(Base)
 }
 

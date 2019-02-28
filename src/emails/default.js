@@ -1,9 +1,8 @@
-const defaultEmail = `
-  <DefaultTemplate
-    preheader="For a limited time only, refer a friend to Drop and you'll both get *$5 in Drop points* to treat yourselves."
+const defaultEmail = `<DefaultTemplate
+    preheader="For a limited time only, refer a friend to Drop and you'll both get $5 in Drop points to treat yourselves."
     hero="referral-upsell/header.png"
     title="This #GivingTuesday, give the gift of caffeine."
-    body="For a limited time only, refer a friend to Drop and you'll both get $5 in Drop points</b> to treat yourselves."
+    body="For a limited time only, refer a friend to Drop and you'll both get $5 in Drop points to treat yourselves."
     button="Give $5, get $5"
     link="https://b.ewd.io/give5get5campaign"
   >
@@ -21,7 +20,6 @@ const defaultEmail = `
 
     <p className="left-align">Warm and fuzzies all around.</p>
     <p className="left-align">XO, The Drop Team</p>
-  </DefaultTemplate>
-`
+  </DefaultTemplate>`
 
 export default defaultEmail
