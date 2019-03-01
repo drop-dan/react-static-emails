@@ -9,43 +9,91 @@ import Editor from './interface/editor'
 import EmailList from './interface/EmailList'
 
 const templates = [
-  { name: 'Default Template', value: defaultEmail },
-  { name: 'Offer Template', value: offerEmail },
+  { name: 'Default Template', value: defaultEmail, template: true },
+  { name: 'Offer Template', value: offerEmail, template: true }
 ]
 
 class Base extends React.Component {
-  constructor () {
+  constructor() {
     super()
-    this.state = { savedEmails: {} }
-    this.updateEmail = this.updateEmail.bind(this)
-    this.closeEmail = this.closeEmail.bind(this)
-    localStorage.setItem('savedEmails', JSON.stringify({ test: defaultEmail }))
+    this.state = { activeEmail: null, savedEmails: {} }
+    this.updateActiveEmail = this.updateActiveEmail.bind(this)
+    this.closeActiveEmail = this.closeActiveEmail.bind(this)
+    this.deleteEmail = this.deleteEmail.bind(this)
+    this.saveEmail = this.saveEmail.bind(this)
+    this.resetEmails = this.resetEmails.bind(this)
   }
 
-  componentWillMount () {
-    this.setState({ savedEmails: JSON.parse(localStorage.getItem('savedEmails')) })
+  componentWillMount() {
+    this.setState({
+      savedEmails: JSON.parse(localStorage.getItem('savedEmails'))
+    })
   }
 
-  updateEmail (email) {
-    // this.state.savedEmails
-    this.setState({ email })
+  updateActiveEmail(email) {
+    this.setState({ activeEmail: email.name })
   }
 
-  closeEmail () {
-    this.setState({ email: null })
+  closeActiveEmail() {
+    this.setState({ activeEmail: null })
   }
 
-  render () {
-    console.log(this.state.savedEmails)
+  saveEmail(email) {
+    console.log(email.name)
+    email.template = false
+    if (!email.name) {
+      email.name = this.getRandomEmailName()
+    }
+    let savedEmails = this.state.savedEmails
+    if (this.findEmail(email).length > 0) {
+      savedEmails = savedEmails.filter(_email => _email.name !== email.name)
+    }
+    savedEmails = savedEmails.concat([email])
+    this.setState({ savedEmails })
+    localStorage.setItem('savedEmails', JSON.stringify(savedEmails))
+  }
+
+  getRandomEmailName() {
+    return `${window.chance.syllable()}-${window.chance.syllable()}-${window.chance.syllable()}`
+  }
+
+  resetEmails() {
+    this.setState({ savedEmails: [] })
+    localStorage.setItem('savedEmails', JSON.stringify([]))
+  }
+
+  findEmail({ name: emailName }) {
+    return this.state.savedEmails.filter(email => email.name === emailName)
+  }
+
+  deleteEmail({ name: emailName }) {
+    const savedEmails = this.state.savedEmails.filter(
+      email => email.name !== emailName
+    )
+    this.setState({ savedEmails })
+    localStorage.setItem('savedEmails', JSON.stringify(savedEmails))
+  }
+
+  render() {
+    const activeEmail = templates
+      .concat(this.state.savedEmails)
+      .find(email => email.name === this.state.activeEmail)
+
     return (
       <div>
-        {this.state.email ? (
-          <Editor email={this.state.email} close={this.closeEmail} />
+        {activeEmail ? (
+          <Editor
+            email={activeEmail}
+            onSave={this.saveEmail}
+            close={this.closeActiveEmail}
+          />
         ) : (
           <EmailList
             templates={templates}
             emails={Object.values(this.state.savedEmails)}
-            updateEmail={this.updateEmail}
+            onClick={this.updateActiveEmail}
+            onDelete={this.deleteEmail}
+            onSave={this.saveEmail}
           />
         )}
       </div>
@@ -54,7 +102,9 @@ class Base extends React.Component {
 }
 
 if (typeof document !== 'undefined') {
-  const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
+  const renderMethod = module.hot
+    ? ReactDOM.render
+    : ReactDOM.hydrate || ReactDOM.render
   const render = Comp => {
     renderMethod(<Comp />, document.getElementById('root'))
   }

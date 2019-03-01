@@ -1,24 +1,41 @@
 import React from 'react'
 
-class EmailList extends React.Component {
-  render() {
-    return (
-      <div style={{ marginTop: 20 }}>
-        <h3>Email Templates</h3>
-        {this.props.templates.map((email, index) => (
-          <div key={"email" + index} onClick={() => this.props.updateEmail(email)}>
-            <p>{email.name}</p>
-          </div>
-        ))}
-        <h3>Saved Emails</h3>
-        {this.props.emails.map((email, index) => (
-          <div key={"email" + index} onClick={() => this.props.updateEmail(email)}>
-            <p>{email.name}</p>
-          </div>
-        ))}
+const EmailItem = ({ email, onClick, onSave, onDelete }) => (
+  <div key={email.name} style={{ display: 'flex', alignSelf: 'center' }}>
+    <div onClick={() => onClick(email)}>
+      <p>{email.name}</p>
+    </div>
+    {email.template ? (
+      <div
+        style={{ margin: '0 10px' }}
+        onClick={() => onSave({ ...email, name: null })}
+      >
+        <p>+</p>
       </div>
-    )
-  }
-}
+    ) : (
+      <div style={{ margin: '0 10px' }} onClick={() => onDelete(email)}>
+        <p>-</p>
+      </div>
+    )}
+  </div>
+)
+
+const EmailList = ({ emails, templates, ...rest }) => (
+  <div style={{ marginTop: 20 }}>
+    <h3>Email Templates</h3>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      {templates.map(email => (
+        <EmailItem key={email.name} email={email} {...rest} />
+      ))}
+    </div>
+
+    <h3>Saved Emails</h3>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      {emails.map(email => (
+        <EmailItem key={email.name} email={email} {...rest} />
+      ))}
+    </div>
+  </div>
+)
 
 export default EmailList
