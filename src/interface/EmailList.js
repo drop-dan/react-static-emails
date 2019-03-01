@@ -1,21 +1,31 @@
 import React from 'react'
 
 const EmailItem = ({ email, onClick, onSave, onDelete }) => (
-  <div key={email.name} style={{ display: 'flex', alignSelf: 'center' }}>
-    <div onClick={() => onClick(email)}>
-      <p>{email.name}</p>
-    </div>
+  <div
+    key={email.name}
+    style={{
+      display: 'flex',
+      alignSelf: 'center',
+      justifyContent: 'space-between',
+      width: 170,
+      margin: '0 auto'
+    }}
+  >
+    <p onClick={() => onClick(email)}>{email.name}</p>
     {email.template ? (
-      <div
-        style={{ margin: '0 10px' }}
+      <span
         onClick={() => onSave({ ...email, name: null })}
+        style={{ margin: '0 10px', lineHeight: '50px' }}
       >
-        <p>+</p>
-      </div>
+        +
+      </span>
     ) : (
-      <div style={{ margin: '0 10px' }} onClick={() => onDelete(email)}>
-        <p>-</p>
-      </div>
+      <span
+        style={{ margin: '0 10px', lineHeight: '50px' }}
+        onClick={() => onDelete(email)}
+      >
+        -
+      </span>
     )}
   </div>
 )

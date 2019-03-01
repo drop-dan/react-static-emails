@@ -22,6 +22,7 @@ class Base extends React.Component {
     this.deleteEmail = this.deleteEmail.bind(this)
     this.saveEmail = this.saveEmail.bind(this)
     this.resetEmails = this.resetEmails.bind(this)
+    this.renameEmail = this.renameEmail.bind(this)
   }
 
   componentWillMount() {
@@ -39,7 +40,6 @@ class Base extends React.Component {
   }
 
   saveEmail(email) {
-    console.log(email.name)
     email.template = false
     if (!email.name) {
       email.name = this.getRandomEmailName()
@@ -50,6 +50,17 @@ class Base extends React.Component {
     }
     savedEmails = savedEmails.concat([email])
     this.setState({ savedEmails })
+    localStorage.setItem('savedEmails', JSON.stringify(savedEmails))
+  }
+
+  renameEmail(email, originalName) {
+    const savedEmails = this.state.savedEmails.filter(
+      _email => _email.name !== originalName
+    )
+    this.setState({
+      savedEmails: savedEmails.concat(email),
+      activeEmail: email.name
+    })
     localStorage.setItem('savedEmails', JSON.stringify(savedEmails))
   }
 
@@ -85,6 +96,7 @@ class Base extends React.Component {
           <Editor
             email={activeEmail}
             onSave={this.saveEmail}
+            onRename={this.renameEmail}
             close={this.closeActiveEmail}
           />
         ) : (
