@@ -16,7 +16,7 @@ const templates = [
 class Base extends React.Component {
   constructor() {
     super()
-    this.state = { activeEmail: null, savedEmails: {} }
+    this.state = { activeEmail: null, savedEmails: [] }
     this.updateActiveEmail = this.updateActiveEmail.bind(this)
     this.closeActiveEmail = this.closeActiveEmail.bind(this)
     this.deleteEmail = this.deleteEmail.bind(this)
@@ -26,9 +26,9 @@ class Base extends React.Component {
   }
 
   componentWillMount() {
-    this.setState({
-      savedEmails: JSON.parse(localStorage.getItem('savedEmails'))
-    })
+    const storage = localStorage.getItem('savedEmails')
+    const savedEmails = storage ? JSON.parse(storage) : []
+    this.setState({ savedEmails })
   }
 
   updateActiveEmail(email) {

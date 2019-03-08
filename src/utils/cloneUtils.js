@@ -2,13 +2,17 @@ import React from 'react'
 import Offer from '../components/Offer'
 import { DefaultTemplate } from '../components'
 
+const COMPONENTS = {
+  offer: Offer,
+  defaulttemplate: DefaultTemplate
+}
+
 export const cloneElement = (element, props, index) => {
   const mergedProps = Object.assign({}, element.props, props)
+  const Component = COMPONENTS[element.type]
 
-  if (element.type === 'offer') {
-    return <Offer key={`offer-${index}`} {...mergedProps} />
-  } else if (element.type === 'defaulttemplate') {
-    return <DefaultTemplate key={`template-${index}`} {...mergedProps} />
+  if (Component) {
+    return <Component key={`${element.type}-${index}`} {...mergedProps} />
   }
 
   return React.cloneElement(element, mergedProps)
