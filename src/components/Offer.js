@@ -16,12 +16,14 @@ const Offer = ({
   button = 'Shop now',
   pointRate,
   oldRate,
+  children,
   divider = true,
+  halfWidth = false,
 }) => {
   const brandLogo = brandData[brand] && brandData[brand].logo
   return (
     <Fragment>
-      <div className="item-wrap">
+      <div className={halfWidth ? "width-50" :"item-wrap"}>
         <Logo image={logo || brandLogo} className="mx-auto" />
 
         <h2>{brandData[brand] ? brandData[brand].name : brand}</h2>
@@ -59,6 +61,8 @@ const Offer = ({
               {body}
             </p>
           ))}
+
+        {children}
 
         {button && (
           <Button href={link} className="wide">

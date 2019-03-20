@@ -36,7 +36,9 @@
 }
 
 .item-wrap p.point-rate,
-.item-wrap p.point-rate-row {
+.width-50 p.point-rate,
+.item-wrap p.point-rate-row,
+.width-50 p.point-rate-row {
   font-family: SFProText-Bold, Sailec, sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -50,12 +52,16 @@
 }
 
 .item-wrap p.point-rate-row,
-.item-wrap p.point-rate-row.old-rate {
+.width-50 p.point-rate-row,
+.item-wrap p.point-rate-row.old-rate
+.width-50 p.point-rate-row.old-rate {
   display: inline;
 }
 
 .item-wrap p.point-rate .point-circle,
-.item-wrap p.point-rate-row .point-circle {
+.width-50 p.point-rate .point-circle,
+.item-wrap p.point-rate-row .point-circle
+.width-50 p.point-rate-row .point-circle {
   width: 12px;
   height: 12px;
   border-radius: 6px;
@@ -64,29 +70,36 @@
 }
 
 .item-wrap p.point-rate.small,
-.item-wrap p.point-rate-row.small {
+.width-50 p.point-rate-row.small
+.item-wrap p.point-rate-row.small
+.width-50 p.point-rate-row.small {
   font-size: 12px;
 }
 
 .item-wrap p.point-rate.small .point-circle,
-.item-wrap p.point-rate-row.small .point-circle {
+.width-50 p.point-rate-row.small .point-circle
+.item-wrap p.point-rate-row.small .point-circle
+.width-50 p.point-rate-row.small .point-circle {
   width: 8px;
   height: 8px;
   border-radius: 4px;
 }
 
-.item-wrap p.old-rate {
+.item-wrap p.old-rate,
+.width-50 p.old-rate {
   color: #ccc;
   font-size: 10px;
   text-decoration: line-through;
 }
 
-.item-wrap p.point-rate.old-rate {
+.item-wrap p.point-rate.old-rate,
+.width-50 p.point-rate.old-rate {
   margin-top: 0;
   margin-bottom: 20px;
 }
 
-.item-wrap p.point-rate-row.old-rate {
+.item-wrap p.point-rate-row.old-rate
+.width-50 p.point-rate-row.old-rate {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 10px;
