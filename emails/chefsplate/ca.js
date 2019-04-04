@@ -12,9 +12,9 @@ const ThanksGivingEmail = () => (
     {'{% set suid = userAttribute.suid %}'}
     {'{% if suid is defined %}'}
     {"{% set root = 'https://www.earnwithdrop.com/user_offers/activate?offer_id=' %}"}
-    {"{% set warby = root ~ '517&suid=' ~ suid %}"}
+    {"{% set chefsplate = root ~ '896&suid=' ~ suid %}"}
     {'{% else %}'}
-    {"{% set warby = 'https://b.ewd.io/SpringWarbyUS' %}"}
+    {"{% set chefsplate = 'https://b.ewd.io/ChefsPlateCAN' %}"}
     {'{% endif %}'}
 
     <Offer
@@ -30,7 +30,7 @@ const ThanksGivingEmail = () => (
     </ol>
 
     <Offer
-      body="Order by April 4th and get 55% off your first box + 10,000 Drop points just for cooking."
+      body="Order by April 4th and get 55% off your first box + 10,000 Drop points just for cooking.*"
       button={false}
       divider={false}
     />
@@ -58,6 +58,7 @@ const ThanksGivingEmail = () => (
       title="Beef Shawarma"
       body="with hummus, couscous pilaf and homemade garlic sauce."
       button="Sign Up Now"
+      note="*For new customers only."
       link="{{ chefsplate }}"
       divider={false}
     />
