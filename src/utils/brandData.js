@@ -41,7 +41,6 @@ const brands = {
   "Sam's Club": { name: "Sam's Club", logo: 'samsclub.png' },
   Scotiabank: { name: 'Scotiabank', logo: 'scotiabank.png' },
   SoFi: { name: 'SoFi', logo: 'sofi.png' },
-  Stash: { name: 'Stash', logo: 'stash.png' },
   Tatcha: { name: 'Tatcha', logo: 'tatcha.png' },
   "The Vitamin Shoppe": { name: "Vitamin Shoppe", logo: 'vitaminshoppe.png' },
   "Thrive Market": { name: "Thrive Market", logo: 'thrive.png' },
