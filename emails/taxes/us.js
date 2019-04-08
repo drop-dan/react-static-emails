@@ -5,9 +5,9 @@ const CasperEmail = () => (
   <DefaultTemplate
     preheaderText="Tax season can be taxing. But it doesn't have to be. File H&R Block under: fast, easy & stress-free."
     hero="taxes/Tax_emailbanner.jpeg"
-    title="Glad we spent so much time learning Hot Cross Buns on the recorder."
-    body="But it turns out - tax season doesn't need to be taxing. Learn where to file + more ways to save."
-    button={<Button href="{{  hrblock  }}">Shop All</Button>}
+    title="Dragging your feet all the way to April 15th?"
+    body="It turns out - tax season doesn't need to be taxing. Learn where to file + more ways to save."
+    button={<Button href="https://b.ewd.io/TaxesUS">Shop All</Button>}
   >
     {'{% set suid = userAttribute.suid %}'}
     {'{% if suid is defined %}'}
@@ -44,8 +44,9 @@ const CasperEmail = () => (
       brand="Stash"
       pointRate="15,000"
       title="Have $5 lying around? Skip the grande latte and open an account with Stash, instead."
-      body="An investment app for people who don't know where to start, Stash lets you take control of your finances in minutes - with no add-on commissions or trading fees, and ongoing tips and tricks to build your portfolio on your own terms."
+      body="An investment app for people who don't know where to start, Stash lets you take control of your finances in minutes - with no add-on commissions* and ongoing tips and tricks to build your portfolio on your own terms."
       button="Open An Account"
+      note="*Clients may incur ancillary fees charged by Stash and/or it’s custodian that are not included in the monthly Wrap-Fee."
       link="{{  stash  }}"
       divider={false}
     />

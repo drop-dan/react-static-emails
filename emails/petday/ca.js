@@ -6,19 +6,19 @@ const CasperEmail = () => (
    preheaderText="A round-up of our top deals just for Man's Best Friend."
    hero="petday/nationalpetday_emailbanner.jpeg"
    title="You can't teach an old dog new tricks."
-   body="But you can buy them new treats. Go on, show your fury best friend some love today."
+   body="But you can buy them new treats. Go on, show your furry best friend some love today."
    button={false}
  >
    {'{% set suid = userAttribute.suid %}'}
    {'{% if suid is defined %}'}
    {"{% set root = 'https://www.earnwithdrop.com/user_offers/activate?offer_id=' %}"}
-   {"{% set superchewer = root ~ '836&suid=' ~ suid %}"}
-   {"{% set rover = root ~ '600&suid=' ~ suid %}"}
-   {"{% set farmersdog = root ~ '501&suid=' ~ suid %}"}
+   {"{% set superchewer = root ~ '906&suid=' ~ suid %}"}
+   {"{% set rover = root ~ '601&suid=' ~ suid %}"}
+   {"{% set openfarm = root ~ '385&suid=' ~ suid %}"}
    {'{% else %}'}
-   {"{% set superchewer = 'https://b.ewd.io/petdaysuperchewerUS' %}"}
-   {"{% set rover = 'https://b.ewd.io/petdayroverUS' %}"}
-   {"{% set farmersdog = 'https://b.ewd.io/petdayfarmersdogUS' %}"}
+   {"{% set superchewer = 'https://b.ewd.io/petdaysuperchewerCAN' %}"}
+   {"{% set rover = 'https://b.ewd.io/petdayroverCAN' %}"}
+   {"{% set openfarm = 'https://b.ewd.io/petdayopenfarmCAN' %}"}
    {'{% endif %}'}
 
    <Offer
@@ -56,14 +56,14 @@ const CasperEmail = () => (
 
 
    <Offer
-     brand="The Farmer's Dog"
-     pointRate="50,000"
-     image="petday/farmersdog1.jpg"
+     brand="Open Farm"
+     pointRate="20,000"
+     image="petday/openfarm3.jpg"
      tagline={false}
      title={false}
-     body="You don't eat overly processed foods, so why serve them to your dog? For Fido-approved fare, turn to The Farmer's Dog: the farm-to-bowl company that delivers fresh, homemade dog food made by pet lovers, for pet lovers. Find a personalized meal plan that works for you and your pup - totally hassle-free."
+     body="You don't eat overly processed foods, so why serve them to your dog? For Fido-approved fare, turn to Open Farm: the farm-to-bowl company that delivers premium, ethically-sourced ingredients made by pet lovers, for pet lovers. Find the option that works for you and your pup - totally hassle-free."
      button="Order Now"
-     link="{{  farmersdog  }}"
+     link="{{  openfarm  }}"
      divider={false}
    />
 
