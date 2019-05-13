@@ -4,7 +4,7 @@ import { Offer, DefaultTemplate, Button } from '../../src/components'
 const CasperEmail = () => (
  <DefaultTemplate
    preheaderText="A round-up of our top deals just for Man's Best Friend."
-   hero="petday/nationalpetday_emailbanner.jpeg"
+   hero="petday/pet_day_email.png"
    title="You can't teach an old dog new tricks."
    body="But you can buy them new treats. Go on, show your furry best friend some love today."
    button={false}

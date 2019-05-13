@@ -1,7 +1,6 @@
 const brands = {
   '1800Contacts': { name: '1800Contacts', logo: '1800contacts.png' },
   'American Eagle': { name: 'American Eagle', logo: 'ae.png' },
-  adidas: { name: 'adidas', logo: 'adidas.png' },
   BarkBox: { name: 'BarkBox', logo: 'barkbox.png' },
   Bloomingdales: { name: 'Bloomingdales', logo: 'bloomingdales.png' },
   Brandless: { name: 'Brandless', logo: 'brandless.png' },

@@ -38,7 +38,7 @@ const OfferRow = ({
 
           {pointRate && (
             <div className="left-align">
-              <PointRate row rate={pointRate} oldRate={oldRate} className="small" />
+              <PointRate row rate={pointRate} oldRate={oldRate} className="small custompointrate" />
             </div>
           )}
 
